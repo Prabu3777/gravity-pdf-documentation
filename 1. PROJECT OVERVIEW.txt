@@ -1,0 +1,639 @@
+1. PROJECT OVERVIEW
+Project Name
+SuperMarket Ecommerce Management System
+2. PROJECT OBJECTIVE
+
+Develop a full-featured supermarket ecommerce application with:
+
+✔ Customer Shopping System
+✔ Staff Management System
+✔ Admin Management System
+✔ Super Admin System
+✔ Salary & Payroll System
+✔ Leave Management System
+✔ Razorpay Payment Gateway
+✔ SMTP Email Verification
+✔ Cloudinary Image Upload
+✔ Role-Based Authentication
+✔ Real-Time Notifications
+✔ Responsive Dashboard
+3. TECHNOLOGY STACK
+FRONTEND
+React.js
+TypeScript
+Vite
+React Router DOM
+Redux Toolkit
+React Query (TanStack Query)
+React Hook Form
+Yup Resolver
+Tailwind CSS v3.4.17
+Axios
+React Hot Toast
+BACKEND
+Node.js
+Express.js
+TypeScript
+MongoDB Atlas
+Mongoose
+JWT Authentication
+BcryptJS
+Nodemailer
+Cloudinary
+Razorpay
+Multer
+4. SYSTEM ARCHITECTURE
+CLIENT (React + TS)
+        │
+        ▼
+ROUTER + REDUX + REACT QUERY
+        │
+        ▼
+API SERVICES (Axios)
+        │
+        ▼
+NODE EXPRESS SERVER
+        │
+        ▼
+MONGODB ATLAS
+        │
+        ▼
+EXTERNAL SERVICES
+│
+├── Razorpay
+├── Cloudinary
+└── SMTP Mail
+5. FRONTEND FOLDER STRUCTURE
+/client
+│
+├── /public
+│
+├── /src
+│   │
+│   ├── /app
+│   │   └── store.ts
+│   │
+│   ├── /redux
+│   │   ├── /slices
+│   │   │   ├── authSlice.ts
+│   │   │   ├── cartSlice.ts
+│   │   │   ├── notificationSlice.ts
+│   │   │   └── themeSlice.ts
+│   │   │
+│   │   └── rootReducer.ts
+│   │
+│   ├── /routes
+│   │   ├── AppRoutes.tsx
+│   │   ├── ProtectedRoute.tsx
+│   │   ├── AdminRoute.tsx
+│   │   ├── StaffRoute.tsx
+│   │   └── CustomerRoute.tsx
+│   │
+│   ├── /layouts
+│   │   ├── AuthLayout.tsx
+│   │   ├── CustomerLayout.tsx
+│   │   ├── StaffLayout.tsx
+│   │   ├── AdminLayout.tsx
+│   │   └── SuperAdminLayout.tsx
+│   │
+│   ├── /pages
+│   │   │
+│   │   ├── /auth
+│   │   ├── /customer
+│   │   ├── /staff
+│   │   ├── /admin
+│   │   └── /super-admin
+│   │
+│   ├── /components
+│   │   ├── /forms
+│   │   ├── /cards
+│   │   ├── /tables
+│   │   ├── /sidebar
+│   │   ├── /navbar
+│   │   ├── /charts
+│   │   └── /modals
+│   │
+│   ├── /hooks
+│   │   ├── /queries
+│   │   └── /mutations
+│   │
+│   ├── /services
+│   │
+│   ├── /schemas
+│   │
+│   ├── /types
+│   │
+│   ├── /utils
+│   │
+│   ├── /constants
+│   │
+│   ├── /assets
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── tailwind.config.js
+└── package.json
+6. BACKEND FOLDER STRUCTURE
+/server
+│
+├── /src
+│   │
+│   ├── /config
+│   │   ├── db.ts
+│   │   ├── cloudinary.ts
+│   │   ├── razorpay.ts
+│   │   └── smtp.ts
+│   │
+│   ├── /controllers
+│   │
+│   ├── /middleware
+│   │   ├── authMiddleware.ts
+│   │   ├── roleMiddleware.ts
+│   │   ├── uploadMiddleware.ts
+│   │   └── errorMiddleware.ts
+│   │
+│   ├── /models
+│   │
+│   ├── /routes
+│   │
+│   ├── /services
+│   │
+│   ├── /repositories
+│   │
+│   ├── /validators
+│   │
+│   ├── /interfaces
+│   │
+│   ├── /utils
+│   │
+│   ├── /types
+│   │
+│   └── server.ts
+│
+└── package.json
+7. TAILWIND CSS CONFIGURATION
+VERSION
+Tailwind CSS v3.4.17
+INSTALLATION
+npm install -D tailwindcss@3.4.17 postcss autoprefixer
+npx tailwindcss init -p
+tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+8. ROUTER ARCHITECTURE
+MAIN ROUTES
+/login
+/signup
+/verify-email
+
+/customer/*
+/staff/*
+/admin/*
+/super-admin/*
+ROLE ROUTING FLOW
+Login
+   │
+   ▼
+Check Role
+   │
+   ├── customer → /customer/home
+   ├── staff → /staff/dashboard
+   ├── admin → /admin/dashboard
+   └── super-admin → /super-admin/dashboard
+9. REDUX ARCHITECTURE
+REDUX PURPOSE
+✔ Authentication State
+✔ Cart State
+✔ Notification State
+✔ Theme State
+✔ Session Management
+REDUX STRUCTURE
+/redux
+│
+├── /slices
+│   ├── authSlice.ts
+│   ├── cartSlice.ts
+│   ├── notificationSlice.ts
+│   └── themeSlice.ts
+│
+└── rootReducer.ts
+10. REACT QUERY ARCHITECTURE
+REACT QUERY PURPOSE
+✔ API Fetching
+✔ Server Cache
+✔ Auto Refetch
+✔ Pagination
+✔ Optimistic Update
+✔ CRUD Operations
+QUERY STRUCTURE
+/hooks
+│
+├── /queries
+│   ├── useProducts.ts
+│   ├── useOrders.ts
+│   ├── useUsers.ts
+│   ├── useLeaves.ts
+│   └── useSalary.ts
+│
+└── /mutations
+    ├── useLogin.ts
+    ├── useSignup.ts
+    ├── useCreateOrder.ts
+    ├── useApplyLeave.ts
+    └── useAdminRequest.ts
+11. FORM VALIDATION ARCHITECTURE
+STACK
+React Hook Form
+Yup Validation
+Yup Resolver
+INSTALLATION
+npm install react-hook-form
+npm install yup
+npm install @hookform/resolvers
+FORM FLOW
+UI Form
+   │
+   ▼
+React Hook Form
+   │
+   ▼
+Yup Validation
+   │
+   ▼
+Resolver
+   │
+   ▼
+Submit API
+12. CUSTOMER PANEL STRUCTURE
+CUSTOMER PANEL
+│
+├── Home
+├── Categories
+├── Products
+├── Wishlist
+├── Cart
+├── Checkout
+├── Orders
+│   ├── Pending Orders
+│   ├── Delivered Orders
+│   ├── Cancelled Orders
+│   └── Order Tracking
+│
+├── Payments
+├── Notifications
+├── Profile
+└── Logout
+13. STAFF PANEL STRUCTURE
+STAFF PANEL
+│
+├── Dashboard
+├── Orders
+├── Products
+├── Inventory
+├── Customers
+├── Leave Management
+│   ├── Apply Leave
+│   ├── Leave History
+│   └── Leave Status
+│
+├── Admin Requests
+│   ├── Apply Admin Access
+│   └── Request Status
+│
+├── Salary & Payslips
+├── Notifications
+├── Settings
+└── Logout
+14. ADMIN PANEL STRUCTURE
+ADMIN PANEL
+│
+├── Dashboard
+├── Staff Management
+├── Leave Requests
+├── Admin Access Requests
+├── Salary Management
+├── Employee Leave Details
+├── Products
+├── Orders
+├── Payments
+├── Reports
+├── Notifications
+├── Settings
+└── Logout
+15. SUPER ADMIN STRUCTURE
+SUPER ADMIN PANEL
+│
+├── Dashboard
+├── Manage Admins
+├── System Settings
+├── Security Logs
+├── Reports
+└── Full Access Control
+16. AUTHENTICATION ALGORITHM
+START
+
+User Signup
+    │
+    ▼
+Validate Input
+    │
+    ▼
+Check Existing Email
+    │
+ ┌──YES──┐
+ │       │
+ ▼       ▼
+Error   Hash Password
+            │
+            ▼
+      Save User
+            │
+            ▼
+ Generate Verification Token
+            │
+            ▼
+      Send SMTP Email
+            │
+            ▼
+ User Click Verification Link
+            │
+            ▼
+ Update:
+ is_verified = true
+
+END
+17. LOGIN ALGORITHM
+START
+
+User Login
+    │
+    ▼
+Validate Input
+    │
+    ▼
+Find User
+    │
+ ┌──NO──┐
+ │      │
+ ▼      ▼
+Error  Compare Password
+            │
+       ┌────┴────┐
+       │         │
+      NO        YES
+       │         │
+       ▼         ▼
+   Invalid    Generate JWT
+                    │
+                    ▼
+              Store Token
+                    │
+                    ▼
+            Redirect By Role
+
+END
+18. EMAIL VERIFICATION ALGORITHM
+User Signup
+    │
+    ▼
+Generate Token
+    │
+    ▼
+Store Token
+    │
+    ▼
+Send SMTP Mail
+    │
+    ▼
+User Click Link
+    │
+    ▼
+Verify Token
+    │
+    ▼
+Update User Verified
+19. CUSTOMER ORDER FLOW
+Browse Products
+      │
+      ▼
+Add To Cart
+      │
+      ▼
+Checkout
+      │
+      ▼
+Create Razorpay Order
+      │
+      ▼
+Open Razorpay Popup
+      │
+      ▼
+Payment Success
+      │
+      ▼
+Verify Payment
+      │
+      ▼
+Save Order
+      │
+      ▼
+Send Confirmation Mail
+20. LEAVE REQUEST ALGORITHM
+Staff Apply Leave
+        │
+        ▼
+Save Request
+status = pending
+        │
+        ▼
+Admin Notification
+        │
+        ▼
+Approve / Reject
+        │
+ ┌──────┴──────┐
+ │             │
+Approve       Reject
+ │             │
+ ▼             ▼
+Approved      Rejected
+ │
+ ▼
+Send Email Notification
+21. ADMIN REQUEST ALGORITHM
+Staff Request Admin Access
+          │
+          ▼
+Save Request
+status = pending
+          │
+          ▼
+Current Admin Reviews
+          │
+          ▼
+Approve Request
+          │
+          ▼
+Update:
+is_admin = true
+          │
+          ▼
+Send Email Notification
+22. SALARY MANAGEMENT ALGORITHM
+Admin Generate Salary
+        │
+        ▼
+Calculate:
+- Basic Salary
+- Bonus
+- Deductions
+        │
+        ▼
+Generate Net Salary
+        │
+        ▼
+Create Payslip
+        │
+        ▼
+Store Database
+        │
+        ▼
+Send Mail Notification
+23. CLOUDINARY IMAGE FLOW
+Select Image
+      │
+      ▼
+Multer Middleware
+      │
+      ▼
+Upload Cloudinary
+      │
+      ▼
+Get Secure URL
+      │
+      ▼
+Save MongoDB
+24. RAZORPAY PAYMENT FLOW
+Checkout
+    │
+    ▼
+Create Razorpay Order
+    │
+    ▼
+Open Razorpay Gateway
+    │
+    ▼
+Payment Success
+    │
+    ▼
+Verify Signature
+    │
+    ▼
+Save Payment
+25. DATABASE COLLECTIONS
+users
+products
+categories
+orders
+payments
+reviews
+wishlists
+carts
+leave_requests
+admin_requests
+salary_details
+notifications
+26. USER MODEL
+name
+email
+password
+phone
+role
+is_admin
+profile_photo
+salary
+is_verified
+created_at
+27. PRODUCT MODEL
+name
+description
+price
+stock
+category
+brand
+images
+ratings
+reviews
+created_by
+28. ORDER MODEL
+user
+products
+shipping_address
+payment_method
+payment_status
+order_status
+total_price
+razorpay_order_id
+29. SECURITY IMPLEMENTATION
+✔ JWT Authentication
+✔ Password Hashing
+✔ Protected APIs
+✔ Role-Based Access
+✔ Email Verification
+✔ Secure Payment Verification
+✔ Rate Limiting
+✔ Input Validation
+✔ Secure Cloudinary Upload
+30. TOAST NOTIFICATIONS
+INSTALLATION
+npm install react-hot-toast
+USAGE
+toast.success("Login Successful")
+toast.error("Payment Failed")
+toast.loading("Uploading...")
+31. DEPLOYMENT ARCHITECTURE
+Frontend:
+Vercel
+
+Backend:
+Render / Railway
+
+Database:
+MongoDB Atlas
+
+Images:
+Cloudinary
+32. FINAL SYSTEM MODULES
+✔ Authentication Module
+✔ Customer Module
+✔ Staff Module
+✔ Admin Module
+✔ Super Admin Module
+✔ Product Module
+✔ Inventory Module
+✔ Order Module
+✔ Payment Module
+✔ Salary Module
+✔ Leave Module
+✔ Notification Module
+✔ Report Module
+✔ Email Module
+✔ Image Upload Module
+✔ RBAC Module
+✔ Dashboard Module
+✔ Analytics Module
