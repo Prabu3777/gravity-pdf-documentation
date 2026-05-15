@@ -1,0 +1,113 @@
+SignUp Page:
+
+Name
+
+Phone or Email
+
+Enter Otp  --> Verify Otp
+
+Image
+
+Password
+
+Confirm Password
+
+Role - Customer/Staff
+
+
+Login Page : 
+
+UserName
+
+Password
+
+
+Product Page:
+
+Name
+
+Image
+
+Category
+
+UomCode -- multiselect dropdown
+
+Discount
+
+Tax
+
+Reorder Quantity
+
+
+Purchase
+
+Item Name   -- both textbox and dropdown
+
+Item Image  -- if item selected then bind item image else need to upload
+
+UomCode -- if item selected then only shown selected item uomcodes else shows all uomcodes in dropdown
+
+Discount -- if item selected then hide else show 
+
+Tax -- if item selected then hide else show 
+
+Reorder Quantity -- if item selected then hide else show 
+
+Purchase Quantity 
+
+Purchase Amount
+
+Purchase Date :
+
+Cost : Purchase Amount/ Purchase Quantity
+
+Balance :
+
+Profit  :
+
+
+Sales
+
+Item Name -- DropDownList
+
+Item Image -- Selected Item Image bind
+
+UomCode -- Selected Item Uomcode shown in ddl
+
+Discount selected item discount bind
+
+Tax -- selected item tax bind
+
+Sales Quantity
+
+Sales Amount
+
+Sales Date :
+
+Sales Price : Sales Amount/ Sales Quantity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
