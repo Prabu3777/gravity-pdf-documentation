@@ -14,6 +14,8 @@ Confirm Password
 
 Role - Customer/Staff
 
+Joining Date 
+
 
 Login Page : 
 
@@ -39,7 +41,7 @@ Tax
 Reorder Quantity
 
 
-Purchase
+Purchase Page
 
 Item Name   -- both textbox and dropdown
 
@@ -66,7 +68,7 @@ Balance :
 Profit  :
 
 
-Sales
+Sales Page
 
 Item Name -- DropDownList
 
@@ -85,6 +87,334 @@ Sales Amount
 Sales Date :
 
 Sales Price : Sales Amount/ Sales Quantity
+
+
+Header
+
+Left to right order
+
+Company Logo --> Search Icon --> Home --> Categories --> Shop --> Wishlist --> Cart --> Orders --> User Logo (It's Header For whole website) (For customers only)
+
+
+Home Page :
+
+
+Randomly scroll 10 images on each 10 seconds like banner
+
+
+Each category randomly shown 5 items
+
+Like 
+
+Cateogry Name
+
+Product details with image
+
+
+Product details shown like Image, name, Price
+
+
+Footer  (It's Footer For whole website)
+
+About      Contact Us Directly    Our Links
+
+Address    Mobile Number          Home
+
+           EMail                  Shop
+ 
+                                  Cart
+
+
+Cateogries Page:
+
+All categories shown on left side... 
+
+
+Once selected one category then that category item will shown on right side
+
+Item  --> Image , Name, Original Amount (if discount then with strike text), Discount,  Amount (if discount amount then need to show Original Amount - DIscount AMount else hidden) Add to Cart, Wishlist..
+
+
+Shop Page :
+
+Each category randomly shown all items
+
+Like 
+
+Cateogry Name
+
+Product details with image
+
+
+Product  --> Image , Name, Original Amount (if discount then with strike text), Discount,  Amount (if discount amount then need to show Original Amount - DIscount AMount else hidden) Add to Cart, Wishlist..
+
+
+Wishlist Page :
+
+Wishlist Item need to shown
+
+Product details with image
+
+
+Product  --> Image , Name, Original Amount (if discount then with strike text), Discount,  Amount (if discount amount then need to show Original Amount - DIscount AMount else hidden) Add to Cart, Wishlist..
+
+
+
+Cart Page :
+
+Once add to cart then need to shown like item
+
+
+Product details with image
+
+
+Product  --> Image , Name,Quantity, Original Amount (if discount then with strike text)*Quantity, Discount * Quantity,  Amount (if discount amount then need to show (Original Amount - DIscount AMount)*Quantity else hidden) remove to Cart button, Wishlist..
+
+
+Orders Page :
+
+(Left Menu) --> Pending Orders --> Delivered Orders --> Cancelled Orders --> Order Tracking
+
+
+Pending Order : Item Image --> Order Date --> View Order (order by date desc)
+same scenario for other 3 orders menus
+
+
+Payment Page:
+
+Payment Amount --> Payment Date --> Transaction Id --> View Orders
+
+
+Notification Page:
+
+
+Profile Page :
+
+
+Total Orders(All Orders) --> Cart --> Profile Details --> Manage Address --> Buy Premium --> CHange Password
+
+
+Total Orders :
+
+Need to shown all orders with status
+
+Cart :
+
+Redirect Cart Componennt
+
+Profile Details :
+
+First Name, Last Name , Profile Photo , Current Passwoord , Mobile Number, Email
+
+Manage Address :
+
+Can add multiple Address & set one as default
+
+
+Buy Premium:
+
+Can buy membership like 1 month, 3month , 6 month, 1 year
+
+Change Password
+
+Current Password, New Password, Conform Password
+
+
+
+Staff  
+
+Dashboard Page:
+
+Empty Page 
+
+Order Page:
+
+
+All order shown does not filter with users
+
+(Left Menu) --> Pending Orders --> Delivered Orders --> Cancelled Orders --> Order Tracking
+
+
+Pending Order : Item Image --> Order Date --> View Order (order by date desc)
+same scenario for other 3 orders menus
+
+
+Products Page :
+
+
+Item Name --> Item Image --> Price --> AVailabe Quantity
+
+
+
+Inventory  Page:
+
+Item Page --> Sale Item --> Purchase Item
+
+
+
+Leave Management
+
+Apply Leave :
+
+    Leave Date, Description, DropDown(CL/EL)
+Leave History :
+       Total Leave date details & in the end total leave balance
+Leave Status : 
+        Approved or removed
+
+Admin Requests Page:
+
+     Apply Admin Access : Apply Admin checkbox --> Once approved then checkbox  disabled & checked
+
+     Request Status : Status of Requests
+
+
+
+Salary & Payslips Page :
+
+
+Salary -- 
+   Salary Breakups -- > Basic(21525) , HRA(12915), Other Allowances(8610),  Gross : Sum of these(43050)
+   Deductions --> EPF Employee(1800) : Total Deductions(1800)  Net Salary(43050-1800=41250)
+   Additions --> EPF Employeer(1800), EPF Admin Fee(150): Total of Additions(1950) : CTC(45000)
+
+Payslips:
+
+It's shown like based on salary and total leave take on current month and also it's downloadable
+
+
+Notifications Page:
+
+EMpty
+
+
+
+Admin Panel 
+
+Dashboard Page:
+
+Empty Page
+
+Staff Management Page :
+
+Here need to shown All staff name, Image, Joining Date, Salary
+
+Leave Request Page :
+
+Employee Name, Profile Image, joining Date, sttus was dropdown (Approve/Reject)
+
+Admin Request Page :
+
+Employee Name, Profile Image, joining Date, sttus was dropdown (Approve/Reject)
+
+Salary Management Page :
+
+All Employee Details once click employee then need to show like
+
+Salary Breakups -- > Basic(21525) , HRA(12915), Other Allowances(8610),  Gross : Sum of these(43050)
+   Deductions --> EPF Employee(1800) : Total Deductions(1800)  Net Salary(43050-1800=41250)
+   Additions --> EPF Employeer(1800), EPF Admin Fee(150): Total of Additions(1950) : CTC(45000)
+
+with existsing data
+
+
+Employee Leave Details Page :
+
+All Employee Details once click employee then need to show like
+
+  Total Leave date details & in the end total leave balance
+
+
+
+Product Page :
+
+Product component need to shown
+
+
+Order Page :
+
+All order need to shown 
+
+Payments Page:
+
+All Payment need to shown
+
+
+Report Page :
+
+Item wise Sales & Purchase
+
+Date wise Sales & Purchase
+
+Customer wise Sales & purchase
+
+With tax wise Sales & Purchase
+
+Without tax wise sales & purchase
+
+
+
+Notification Page :
+
+Empty Page
+
+
+
+Super Admin Panel Page:
+
+
+Same Like Admin Panel need to add one component
+
+Manage User Page
+
+Manage Admin  & Manage Customer Can edit user details
+
+
+
+User Schema:
+
+FirstName string, LastName string, username  email or mobile, image string(cloudinary url), password bcrypt password, role string(customer/staff), Joinningdate(date), isAdmin bit, isSuperadmin bit,premium_start_dt date, premium_end_date date, reliveingdate date, address json array [{unique_id for each address, door no, street, Village, city, state, country, pin code, is_default}]
+
+Salary Schema :
+
+userid, basic number, hra number, otherallowance number, epf number, admin fee number
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
