@@ -404,7 +404,7 @@ user_id identity value, delivery_date date, status string, items jsonarray,amoun
 
 
 
-
+MONGODB_URI=mongodb+srv://prabuarthi28_db_user:wqSnlUn3jeLyF5DT@supermarket.hcthibk.mongodb.net/supermarket?retryWrites=true&w=majority
 
 mongodb+srv://prabuarthi28_db_user:<db_password>@supermarket.hcthibk.mongodb.net/?appName=supermarket
 
@@ -413,21 +413,281 @@ wqSnlUn3jeLyF5DT
 
 
 
+User Mongoose Schena:
+
+const mongoose = require("mongoose");
+
+const UserSchema = new mongoose.Schema(
+  {
+    firstName: {
+      type: String,
+      required: true,
+    },
+
+    lastName: {
+      type: String,
+      required: true,
+    },
+
+    username: {
+      type: String, // email or mobile
+      required: true,
+      unique: true,
+    },
+
+    image: {
+      type: String, // cloudinary url
+      default: "",
+    },
+
+    password: {
+      type: String, // bcrypt password
+      required: true,
+    },
+
+    role: {
+      type: String,
+      enum: ["customer", "staff"],
+      default: "customer",
+    },
+
+    joiningDate: {
+      type: Date,
+      default: Date.now,
+    },
+
+    isAdmin: {
+      type: Boolean,
+      default: false,
+    },
+
+    isSuperadmin: {
+      type: Boolean,
+      default: false,
+    },
+
+    premium_start_dt: {
+      type: Date,
+      default: null,
+    },
+
+    premium_end_date: {
+      type: Date,
+      default: null,
+    },
+
+    relievingDate: {
+      type: Date,
+      default: null,
+    },
+
+    admin_status: {
+      type: String,
+      default: "active",
+    },
+
+    otpVerified: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+module.exports = mongoose.model("User", UserSchema);
+
+
+Otp model
+
+const mongoose = require("mongoose");
+
+const otpSchema = new mongoose.Schema({
+  username: String,
+  otp: String,
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    expires: 600 // 600 seconds = 10 minutes
+  }
+});
+
+module.exports = mongoose.model("Otp", otpSchema);
+Send OTP API
+
+const OTP = require("../models/Otp");
+
+exports.sendOtp = async (req, res) => {
+  try {
+    const { username } = req.body;
+
+    let otp = Math.floor(
+      100000 + Math.random() * 900000
+    ).toString();
+
+    await OTP.findOneAndUpdate(
+      { username },
+      {
+        otp,
+        expiresAt: new Date(Date.now() + 5 * 60 * 1000),
+      },
+      { upsert: true }
+    );
+
+    if (isEmail(username)) {
+      await transporter.sendMail({
+        from: process.env.EMAIL_USER,
+        to: username,
+        subject: "OTP Verification",
+        html: `<h3>Your OTP is ${otp}</h3>`,
+      });
+    } else if (isMobile(username)) {
+      // Twilio SMS
+      await client.messages.create({
+        body: `Your OTP is ${otp}`,
+        from: process.env.TWILIO_PHONE,
+        to: `+91${username}`,
+      });
+    } else {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid Email or Mobile Number",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "OTP Sent Successfully",
+    });
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: err.message,
+    });
+  }
+};
+
+const isEmail = (value) => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+};
+
+
+const isMobile = (value) => {
+  return /^[0-9]{10}$/.test(value);
+};
+
+
+
+Verify OTP API
+
+exports.verifyOtp = async (req, res) => {
+  try {
+    const { username, otp } = req.body;
+
+    const otpRecord = await OTP.findOne({
+      username,
+      otp,
+    });
+
+    if (!otpRecord) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid OTP",
+      });
+    }
+
+    if (new Date() > otpRecord.expiresAt) {
+      return res.status(400).json({
+        success: false,
+        message: "OTP Expired",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "OTP Verified Successfully",
+    });
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: err.message,
+    });
+  }
+};
 
 
 
 
+SIgnUp 
 
+const bcrypt = require("bcryptjs");
+const User = require("../models/User");
+const OTP = require("../models/Otp");
 
+exports.signup = async (req, res) => {
+  try {
+    const {
+      firstName,
+      lastName,
+      username,
+      password,
+      role,
+      joiningDate,
+      image
+    } = req.body;
 
+    const otpRecord = await OTP.findOne({
+      username
+    });
 
+    if (!otpRecord) {
+      return res.status(400).json({
+        success: false,
+        message: "Please verify OTP first"
+      });
+    }
 
+    const existingUser = await User.findOne({
+      username
+    });
 
+    if (existingUser) {
+      return res.status(400).json({
+        success: false,
+        message: "User already exists"
+      });
+    }
 
+    const hashedPassword =
+      await bcrypt.hash(password, 10);
 
+    const user = await User.create({
+      firstName,
+      lastName,
+      username,
+      image,
+      password: hashedPassword,
+      role,
+      joiningDate,
+      otpVerified: true
+    });
 
+    await OTP.deleteOne({ username });
 
+    res.status(201).json({
+      success: true,
+      message: "Signup Successful",
+      user
+    });
 
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: err.message
+    });
+  }
+};
 
 
 
