@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wholesale Spices - Bulk Orders | Ellakai Spices</title>
+    <meta name="description" content="Get competitive wholesale pricing for bulk spice orders. Minimum 50kg. Trusted supplier for restaurants, hotels & supermarkets.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .wholesale-page {
+            padding-top: 80px;
+        }
+
+        .wholesale-hero {
+            background: linear-gradient(135deg, rgba(27, 58, 43, 0.95), rgba(42, 88, 64, 0.95)),
+                        url('https://images.unsplash.com/photo-1596040033229-a0b8d1cf0877?w=1600') center/cover;
+            padding: 120px 20px 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .wholesale-hero h1 {
+            font-size: 52px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .wholesale-hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .wholesale-form-section {
+            padding: 80px 0;
+            background: #F8F5F0;
+        }
+
+        .wholesale-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1B3A2B;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid #E5E5E5;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #C46A2D;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: #C46A2D;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #A85524;
+            transform: translateY(-2px);
+        }
+
+        .pricing-tiers {
+            padding: 80px 0;
+        }
+
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .tier-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .tier-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        }
+
+        .tier-card.featured {
+            background: linear-gradient(135deg, #1B3A2B, #2A5840);
+            color: white;
+        }
+
+        .tier-card.featured h3,
+        .tier-card.featured .tier-price {
+            color: white;
+        }
+
+        .tier-name {
+            font-size: 14px;
+            color: #C46A2D;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .tier-card.featured .tier-name {
+            color: #D4AF37;
+        }
+
+        .tier-card h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .tier-price {
+            font-size: 48px;
+            font-weight: 700;
+            color: #C46A2D;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+        }
+
+        .tier-price span {
+            font-size: 18px;
+            color: #999;
+        }
+
+        .tier-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .tier-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .tier-card.featured .tier-features li {
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .wholesale-hero h1 {
+                font-size: 38px;
+            }
+
+            .wholesale-form-container {
+                padding: 30px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <i class="fas fa-seedling"></i>
+                            <span>Ellakai Spices</span>
+                        </a>
+                    </div>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="products.html" class="nav-link">Products</a></li>
+                        <li><a href="wholesale.html" class="nav-link active">Wholesale</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <button class="icon-btn search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="icon-btn cart-btn" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                        <a href="https://wa.me/1234567890" class="btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp Order</span>
+                        </a>
+                        <a href="wholesale.html" class="btn-wholesale">Get Wholesale Price</a>
+
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Wholesale Page -->
+    <main class="wholesale-page">
+        <!-- Hero -->
+        <section class="wholesale-hero">
+            <div class="container">
+                <h1>Bulk Spice Supply</h1>
+                <p>Competitive wholesale pricing for restaurants, hotels, supermarkets, and distributors</p>
+                <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                    <div>
+                        <div style="font-size: 42px; font-weight: 700; color: #D4AF37;">₹500K+</div>
+                        <div>Monthly Exports</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 42px; font-weight: 700; color: #D4AF37;">200+</div>
+                        <div>B2B Clients</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 42px; font-weight: 700; color: #D4AF37;">15+</div>
+                        <div>Countries Served</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Tiers -->
+        <section class="pricing-tiers">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Wholesale Pricing</span>
+                    <h2 class="section-title">Flexible Pricing Tiers</h2>
+                    <p class="section-description">Choose the right plan for your business volume</p>
+                </div>
+
+                <div class="tier-grid">
+                    <div class="tier-card">
+                        <div class="tier-name">Starter</div>
+                        <h3>50-100 kg</h3>
+                        <div class="tier-price">₹650<span>/kg</span></div>
+                        <ul class="tier-features">
+                            <li>✓ Standard packaging</li>
+                            <li>✓ 7-10 days delivery</li>
+                            <li>✓ Email support</li>
+                            <li>✓ Quality certificate</li>
+                        </ul>
+                        <a href="#quote-form" class="btn btn-secondary btn-block">Get Quote</a>
+                    </div>
+
+                    <div class="tier-card featured">
+                        <div class="tier-name">Professional</div>
+                        <h3>100-500 kg</h3>
+                        <div class="tier-price">₹580<span>/kg</span></div>
+                        <ul class="tier-features">
+                            <li>✓ Custom packaging</li>
+                            <li>✓ 5-7 days delivery</li>
+                            <li>✓ Priority support</li>
+                            <li>✓ Lab test reports</li>
+                            <li>✓ Flexible payment</li>
+                        </ul>
+                        <a href="#quote-form" class="btn btn-primary btn-block">Get Quote</a>
+                    </div>
+
+                    <div class="tier-card">
+                        <div class="tier-name">Enterprise</div>
+                        <h3>500+ kg</h3>
+                        <div class="tier-price">Custom</div>
+                        <ul class="tier-features">
+                            <li>✓ Premium packaging</li>
+                            <li>✓ Fast delivery</li>
+                            <li>✓ Dedicated manager</li>
+                            <li>✓ Full documentation</li>
+                            <li>✓ Extended credit</li>
+                            <li>✓ Volume discounts</li>
+                        </ul>
+                        <a href="#quote-form" class="btn btn-secondary btn-block">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Form -->
+        <section class="wholesale-form-section" id="quote-form">
+            <div class="container">
+                <div class="wholesale-form-container">
+                    <div class="section-header text-center">
+                        <span class="section-subtitle">Get Started</span>
+                        <h2 class="section-title" style="margin-bottom: 10px;">Request Wholesale Quote</h2>
+                        <p style="color: #666; margin-bottom: 40px;">Fill out the form below and our team will contact you within 24 hours</p>
+                    </div>
+
+                    <form id="wholesaleForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessName">Business Name *</label>
+                                <input type="text" id="businessName" name="businessName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="spices">Spices Required *</label>
+                            <select id="spices" name="spices" required>
+                                <option value="">Select spice type</option>
+                                <option value="cardamom">Cardamom</option>
+                                <option value="black-pepper">Black Pepper</option>
+                                <option value="cloves">Cloves</option>
+                                <option value="cumin">Cumin Seeds</option>
+                                <option value="fennel">Fennel Seeds</option>
+                                <option value="coriander">Coriander</option>
+                                <option value="turmeric">Turmeric</option>
+                                <option value="mixed">Mixed Spices</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quantity">Quantity (in kg) *</label>
+                                <input type="number" id="quantity" name="quantity" min="50" placeholder="Minimum 50kg" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency">Order Frequency</label>
+                                <select id="frequency" name="frequency">
+                                    <option value="">Select frequency</option>
+                                    <option value="one-time">One-time</option>
+                                    <option value="monthly">Monthly</option>
+                                    <option value="quarterly">Quarterly</option>
+                                    <option value="regular">Regular Orders</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Additional Requirements</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your specific requirements, packaging needs, delivery timeline, etc."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Submit Quote Request
+                            <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Why Choose Us</span>
+                    <h2 class="section-title">Wholesale Benefits</h2>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>Competitive Pricing</h3>
+                        <p>Best wholesale rates with volume-based discounts and flexible payment terms</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <h3>Custom Packaging</h3>
+                        <p>Private labeling and custom packaging options for your brand</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Reliable Logistics</h3>
+                        <p>Timely delivery across India and international shipping available</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Dedicated Support</h3>
+                        <p>Personal account manager for all your wholesale needs</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>Long-term Contracts</h3>
+                        <p>Secure supply agreements with locked-in pricing</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Quality Assurance</h3>
+                        <p>Complete documentation, lab reports, and quality certificates</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>Ellakai Spices</span>
+                    </div>
+                    <p>Premium quality spices directly sourced from Indian farmers.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="products.html">Cardamom</a></li>
+                        <li><a href="products.html">Black Pepper</a></li>
+                        <li><a href="products.html">All Spices</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <span>+91 1234567890</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>wholesale@ellakispices.com</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ellakai Spices. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('wholesaleForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showNotification('Quote request submitted successfully! We\'ll contact you within 24 hours.', 'success');
+            e.target.reset();
+            setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

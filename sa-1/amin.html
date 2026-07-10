@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Panel - Ellakai Spices</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+font-family:Inter;
+margin:0;
+background:#f5f6fa;
+}
+
+.header{
+background:#1B3A2B;
+color:white;
+padding:20px;
+font-size:20px;
+font-weight:600;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:350px 1fr;
+gap:40px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card h2{
+margin-top:0;
+}
+
+input,select,textarea{
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:18px;
+border:1px solid #ddd;
+border-radius:6px;
+font-size:14px;
+}
+
+textarea{
+height:80px;
+}
+
+button{
+background:#C46A2D;
+color:white;
+border:none;
+padding:12px;
+border-radius:6px;
+cursor:pointer;
+font-weight:600;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+.product-list{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+gap:20px;
+}
+
+.product{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.product img{
+width:100%;
+height:160px;
+object-fit:cover;
+}
+
+.product-info{
+padding:15px;
+}
+
+.product-name{
+font-weight:600;
+}
+
+.product-price{
+color:#C46A2D;
+margin-top:5px;
+}
+
+.actions{
+margin-top:10px;
+display:flex;
+gap:10px;
+}
+
+.delete{
+background:#e74c3c;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+Ellakai Spices Admin Panel
+</div>
+
+<div class="container">
+
+<div class="grid">
+
+<!-- Product Form -->
+
+<div class="card">
+
+<h2>Add Product</h2>
+
+<input id="name" placeholder="Product Name">
+
+<input id="price" placeholder="Price (₹ / kg)">
+
+<select id="category">
+<option>Whole Spices</option>
+<option>Ground Spices</option>
+<option>Export Quality</option>
+<option>Bulk Wholesale</option>
+</select>
+
+<input id="image" placeholder="Image URL">
+
+<textarea id="desc" placeholder="Product Description"></textarea>
+
+<button onclick="addProduct()">Publish Product</button>
+
+</div>
+
+<!-- Product List -->
+
+<div class="card">
+
+<h2>Published Products</h2>
+
+<div class="product-list" id="productList"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+let products = JSON.parse(localStorage.getItem("products")) || []
+
+function saveProducts(){
+localStorage.setItem("products",JSON.stringify(products))
+}
+
+function addProduct(){
+
+let product={
+name:document.getElementById("name").value,
+price:document.getElementById("price").value,
+category:document.getElementById("category").value,
+image:document.getElementById("image").value,
+desc:document.getElementById("desc").value
+}
+
+products.push(product)
+
+saveProducts()
+
+displayProducts()
+
+document.getElementById("name").value=""
+document.getElementById("price").value=""
+document.getElementById("image").value=""
+document.getElementById("desc").value=""
+
+}
+
+function deleteProduct(index){
+
+products.splice(index,1)
+
+saveProducts()
+
+displayProducts()
+
+}
+
+function displayProducts(){
+
+let html=""
+
+products.forEach((p,i)=>{
+
+html+=`
+
+<div class="product">
+
+<img src="${p.image}">
+
+<div class="product-info">
+
+<div class="product-name">${p.name}</div>
+
+<div class="product-price">₹${p.price}</div>
+
+<div>${p.category}</div>
+
+<div class="actions">
+
+<button class="delete" onclick="deleteProduct(${i})">Delete</button>
+
+</div>
+
+</div>
+
+</div>
+
+`
+
+})
+
+document.getElementById("productList").innerHTML=html
+
+}
+
+displayProducts()
+
+</script>
+
+</body>
+</html>

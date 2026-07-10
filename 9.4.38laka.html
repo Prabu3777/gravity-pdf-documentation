@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naattu Suvai — Pure & Natural Spices</title>
+<meta name="description" content="Premium organic spices and cold-pressed oils direct from South Indian farms.">
+<meta name="keywords" content="organic spices, cardamom, pepper, turmeric, sesame oil, cold pressed oil, naattu suvai">
+<meta property="og:title" content="Naattu Suvai — Pure & Natural Spices">
+<meta property="og:description" content="Handpicked organic spices from South Indian farms. No chemicals, no preservatives.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://naattusuvai.com">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config={theme:{extend:{colors:{brand:{50:'#f0fdf0',100:'#dcfce7',200:'#bbf7d0',300:'#86efac',400:'#4ade80',500:'#2e7d32',600:'#256b2a',700:'#1b5e20',800:'#145218',900:'#0d3b10'},gold:{50:'#fffbeb',100:'#fef3c7',200:'#fde68a',300:'#fcd34d',400:'#d4a017',500:'#b8860b',600:'#92400e',700:'#78350f'},cream:{50:'#FFFDF7',100:'#FFF9ED',200:'#FFF3DB',300:'#FFE8C2'},earth:{100:'#f5e6d3',200:'#e8d0b3',300:'#d4b896',400:'#8B6914',500:'#6B4F1A',600:'#4A3710'}},fontFamily:{pop:['Poppins','sans-serif']}}}}
+</script>
+<style>
+*{font-family:'Poppins',sans-serif;scroll-behavior:smooth;margin:0;padding:0;box-sizing:border-box}
+body{background:#FFFDF7}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:#FFF9ED}::-webkit-scrollbar-thumb{background:#2e7d32;border-radius:99px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes slideR{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes bounceS{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes spinS{to{transform:rotate(360deg)}}
+@keyframes ping{75%,100%{transform:scale(1.6);opacity:0}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.afu{animation:fadeUp .6s ease-out both}.afi{animation:fadeIn .4s ease-out both}
+.asi{animation:scaleIn .45s ease-out both}.asr{animation:slideR .6s ease-out both}
+.afl{animation:float 3s ease-in-out infinite}.abs{animation:bounceS 2s ease-in-out infinite}
+.shake{animation:shake .3s ease-in-out}
+.d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}.d5{animation-delay:.5s}
+.page{display:none;opacity:0}.page.active{display:block;animation:fadeIn .3s ease-out forwards}
+.glass{background:rgba(255,253,247,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.pc{transition:all .35s cubic-bezier(.16,1,.3,1)}.pc:hover{transform:translateY(-6px);box-shadow:0 16px 36px -10px rgba(46,125,50,.14)}
+.btn-s{position:relative;overflow:hidden}.btn-s::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);transition:left .45s}.btn-s:hover::after{left:100%}
+.bc{transition:all .25s ease}.bc:hover{transform:translateY(-3px);box-shadow:0 8px 24px -6px rgba(46,125,50,.1)}
+.wopt{transition:all .15s ease;cursor:pointer}.wopt.sel{background:#2e7d32;color:#fff;border-color:#2e7d32}
+.toast{animation:fadeUp .35s ease-out both}.toast.out{animation:fadeIn .25s ease-out reverse both}
+.wa-pulse::before{content:'';position:absolute;inset:-4px;border-radius:50%;background:#25D366;opacity:.25;animation:ping 1.5s cubic-bezier(0,0,.2,1) infinite}
+.mob-menu{transform:translateX(100%);transition:transform .3s cubic-bezier(.16,1,.3,1)}.mob-menu.open{transform:translateX(0)}
+.admin-side{transition:transform .3s cubic-bezier(.16,1,.3,1)}
+@media(max-width:1023px){.admin-side{transform:translateX(-100%);position:fixed;z-index:55}.admin-side.open{transform:translateX(0)}}
+.overlay{background:rgba(0,0,0,.45);backdrop-filter:blur(3px)}
+.line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+input:focus,textarea:focus,select:focus{outline:none;box-shadow:0 0 0 3px rgba(46,125,50,.12);border-color:#4ade80!important}
+.spinner{width:18px;height:18px;border:2.5px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spinS .6s linear infinite;display:inline-block;vertical-align:middle}
+.stat-bar{height:6px;border-radius:99px;background:#dcfce7;overflow:hidden}.stat-bar-fill{height:100%;border-radius:99px;background:#2e7d32;transition:width .8s ease}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:99px;font-size:10px;font-weight:600;letter-spacing:.03em}
+</style>
+</head>
+<body class="font-pop text-earth-500 overflow-x-hidden">
+
+<!-- TOAST CONTAINER -->
+<div id="toasts" class="fixed top-20 right-4 z-[200] flex flex-col gap-2 pointer-events-none"></div>
+
+<!-- ===================== CUSTOMER NAVIGATION ===================== -->
+<nav id="custNav" class="glass fixed top-0 left-0 right-0 z-50 border-b border-brand-100/40">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16 lg:h-[72px]">
+  <a href="#" onclick="nav('home');return false" class="flex items-center gap-2 flex-shrink-0">
+    <div class="w-9 h-9 bg-brand-500 rounded-lg flex items-center justify-center shadow"><iconify-icon icon="lucide:leaf" class="text-white text-lg"></iconify-icon></div>
+    <div><span class="text-xl font-extrabold text-brand-700 tracking-tight">Naattu</span><span class="text-xl font-extrabold text-gold-400 tracking-tight"> Suvai</span></div>
+  </a>
+  <div class="hidden md:flex items-center gap-1">
+    <a href="#" onclick="nav('home');return false" class="px-4 py-2 text-sm font-medium text-earth-500 hover:text-brand-600 rounded-lg hover:bg-brand-50 transition-all">Home</a>
+    <a href="#" onclick="nav('products');return false" class="px-4 py-2 text-sm font-medium text-earth-500 hover:text-brand-600 rounded-lg hover:bg-brand-50 transition-all">Products</a>
+    <a href="#" onclick="nav('home');setTimeout(()=>document.getElementById('benefits')?.scrollIntoView({behavior:'smooth'}),100);return false" class="px-4 py-2 text-sm font-medium text-earth-500 hover:text-brand-600 rounded-lg hover:bg-brand-50 transition-all">Why Us</a>
+    <a href="#" onclick="nav('home');setTimeout(()=>document.getElementById('reviews')?.scrollIntoView({behavior:'smooth'}),100);return false" class="px-4 py-2 text-sm font-medium text-earth-500 hover:text-brand-600 rounded-lg hover:bg-brand-50 transition-all">Reviews</a>
+  </div>
+  <div class="flex items-center gap-1.5">
+    <button onclick="nav('cart')" class="relative p-2.5 rounded-xl hover:bg-brand-50 transition-colors group" title="Cart">
+      <iconify-icon icon="lucide:shopping-bag" class="text-xl text-earth-500 group-hover:text-brand-600"></iconify-icon>
+      <span id="cartBadge" class="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] bg-brand-500 text-white text-[9px] font-bold rounded-full flex items-center justify-center shadow-sm hidden">0</span>
+    </button>
+    <button onclick="nav('admin-login')" class="p-2.5 rounded-xl hover:bg-brand-50 transition-colors group" title="Admin">
+      <iconify-icon icon="lucide:shield" class="text-lg text-earth-300 group-hover:text-brand-600"></iconify-icon>
+    </button>
+    <button onclick="toggleMob()" class="md:hidden p-2.5 rounded-xl hover:bg-brand-50"><iconify-icon icon="lucide:menu" class="text-xl text-earth-500"></iconify-icon></button>
+  </div>
+</div>
+</div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobMenu" class="mob-menu fixed inset-y-0 right-0 w-72 bg-cream-50 z-[60] shadow-2xl p-6 flex flex-col">
+<div class="flex justify-between items-center mb-8"><span class="text-lg font-bold text-brand-700">Menu</span><button onclick="toggleMob()" class="p-2 rounded-lg hover:bg-brand-50"><iconify-icon icon="lucide:x" class="text-xl"></iconify-icon></button></div>
+<div class="flex flex-col gap-1">
+  <a href="#" onclick="nav('home');toggleMob();return false" class="px-4 py-3 text-sm font-medium rounded-xl hover:bg-brand-50 hover:text-brand-600 transition-all">Home</a>
+  <a href="#" onclick="nav('products');toggleMob();return false" class="px-4 py-3 text-sm font-medium rounded-xl hover:bg-brand-50 hover:text-brand-600 transition-all">Products</a>
+  <a href="#" onclick="nav('cart');toggleMob();return false" class="px-4 py-3 text-sm font-medium rounded-xl hover:bg-brand-50 hover:text-brand-600 transition-all">Cart</a>
+  <a href="#" onclick="nav('admin-login');toggleMob();return false" class="px-4 py-3 text-sm font-medium rounded-xl hover:bg-brand-50 hover:text-brand-600 transition-all">Admin Panel</a>
+</div>
+<div class="mt-auto"><a href="https://wa.me/919876543210" target="_blank" class="flex items-center gap-3 px-4 py-3 bg-[#25D366] text-white rounded-xl text-sm font-medium hover:bg-[#20bd5a] transition-colors"><iconify-icon icon="mdi:whatsapp" class="text-xl"></iconify-icon>WhatsApp Order</a></div>
+</div>
+<div id="mobOvr" class="fixed inset-0 overlay z-[55] hidden" onclick="toggleMob()"></div>
+
+<!-- ============================================================ -->
+<!-- ====================== HOME PAGE =========================== -->
+<!-- ============================================================ -->
+<div id="pg-home" class="page active">
+
+<section class="min-h-screen flex items-center pt-[72px] relative overflow-hidden" style="background:linear-gradient(135deg,#f0fdf0 0%,#FFFDF7 35%,#FFF9ED 65%,#f0fdf0 100%)">
+<div class="absolute top-20 right-0 w-96 h-96 bg-brand-200/25 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-80 h-80 bg-gold-200/25 rounded-full blur-3xl"></div>
+<div class="absolute top-1/3 left-1/4 w-3 h-3 bg-brand-400 rounded-full afl"></div>
+<div class="absolute top-1/2 right-1/3 w-2 h-2 bg-gold-300 rounded-full afl d3"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-0">
+<div class="grid lg:grid-cols-2 gap-10 lg:gap-8 items-center">
+  <div class="max-w-xl">
+    <div class="afu"><span class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-50 border border-brand-200 rounded-full text-[11px] font-semibold text-brand-600 tracking-wider uppercase mb-6"><iconify-icon icon="lucide:sparkles" class="text-gold-400"></iconify-icon>Farm to Your Kitchen</span></div>
+    <h1 class="afu d1 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-earth-500 leading-[1.05] tracking-tight mb-6">Pure &<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-brand-700">Natural</span><br>Spices</h1>
+    <p class="afu d2 text-base lg:text-lg text-earth-500/65 leading-relaxed mb-8 max-w-md">Handpicked from organic farms across South India. No chemicals, no preservatives — just the authentic taste your grandmother remembers.</p>
+    <div class="afu d3 flex flex-wrap gap-3">
+      <button onclick="nav('products')" class="btn-s bg-brand-500 hover:bg-brand-600 text-white px-8 py-3.5 rounded-xl font-semibold text-sm shadow-lg shadow-brand-500/25 transition-all active:scale-[.98]">Shop Now <iconify-icon icon="lucide:arrow-right" class="ml-1 inline-block"></iconify-icon></button>
+      <button onclick="document.getElementById('benefits')?.scrollIntoView({behavior:'smooth'})" class="border-2 border-earth-200 hover:border-brand-300 text-earth-500 hover:text-brand-600 px-8 py-3.5 rounded-xl font-semibold text-sm transition-all">Learn More</button>
+    </div>
+    <div class="afu d4 flex items-center gap-6 mt-10 pt-8 border-t border-earth-100">
+      <div><span class="text-2xl font-bold text-brand-600">500+</span><p class="text-[11px] text-earth-500/50 mt-0.5">Happy Families</p></div>
+      <div class="w-px h-10 bg-earth-100"></div>
+      <div><span class="text-2xl font-bold text-brand-600">100%</span><p class="text-[11px] text-earth-500/50 mt-0.5">Organic</p></div>
+      <div class="w-px h-10 bg-earth-100"></div>
+      <div><span class="text-2xl font-bold text-brand-600">15+</span><p class="text-[11px] text-earth-500/50 mt-0.5">Varieties</p></div>
+    </div>
+  </div>
+  <div class="relative asi d2">
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-brand-900/10">
+      <img src="https://picsum.photos/seed/naattu-hero-spices-bowl/700/700" alt="Fresh Organic Spices" class="w-full h-[380px] sm:h-[480px] lg:h-[580px] object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/15 to-transparent"></div>
+    </div>
+    <div class="absolute -bottom-3 -left-3 sm:bottom-6 sm:-left-5 bg-white rounded-2xl shadow-xl p-4 abs"><div class="flex items-center gap-3"><div class="w-11 h-11 bg-gold-50 rounded-xl flex items-center justify-center"><iconify-icon icon="lucide:award" class="text-2xl text-gold-400"></iconify-icon></div><div><p class="text-sm font-bold text-earth-500">FSSAI Certified</p><p class="text-[10px] text-earth-500/50">Premium Quality</p></div></div></div>
+    <div class="absolute -top-2 -right-2 sm:top-6 sm:-right-5 bg-white rounded-2xl shadow-xl p-4 afl"><div class="flex items-center gap-2"><div class="flex -space-x-2"><div class="w-7 h-7 rounded-full bg-brand-100 border-2 border-white flex items-center justify-center text-[9px] font-bold text-brand-600">K</div><div class="w-7 h-7 rounded-full bg-gold-100 border-2 border-white flex items-center justify-center text-[9px] font-bold text-gold-600">R</div><div class="w-7 h-7 rounded-full bg-brand-100 border-2 border-white flex items-center justify-center text-[9px] font-bold text-brand-600">S</div></div><div><p class="text-xs font-bold text-earth-500">4.9 ★</p><p class="text-[9px] text-earth-500/50">500+ reviews</p></div></div></div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="py-20 lg:py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="text-center mb-12">
+    <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-50 border border-brand-100 rounded-full text-[11px] font-semibold text-brand-600 tracking-wider uppercase mb-4"><iconify-icon icon="lucide:flame" class="text-gold-400"></iconify-icon>Bestsellers</span>
+    <h2 class="text-3xl lg:text-4xl font-bold text-earth-500 tracking-tight">Our Premium Selection</h2>
+    <p class="mt-2 text-earth-500/55 text-sm">Handpicked spices sourced directly from trusted organic farms</p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" id="featGrid"></div>
+  <div class="text-center mt-10"><button onclick="nav('products')" class="inline-flex items-center gap-2 border-2 border-brand-200 hover:border-brand-400 text-brand-600 hover:bg-brand-50 px-8 py-3 rounded-xl font-semibold text-sm transition-all">View All Products <iconify-icon icon="lucide:arrow-right"></iconify-icon></button></div>
+</div>
+</section>
+
+<!-- BENEFITS -->
+<section id="benefits" class="py-20 lg:py-24 bg-cream-50 relative overflow-hidden">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-brand-100/25 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+  <div class="text-center mb-12"><span class="inline-flex items-center gap-2 px-4 py-1.5 bg-gold-50 border border-gold-200 rounded-full text-[11px] font-semibold text-gold-600 tracking-wider uppercase mb-4"><iconify-icon icon="lucide:shield-check" class="text-brand-500"></iconify-icon>Our Promise</span><h2 class="text-3xl lg:text-4xl font-bold text-earth-500 tracking-tight">Why Choose Naattu Suvai?</h2></div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div class="bc bg-white rounded-2xl p-7 border border-earth-100/40"><div class="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center mb-4"><iconify-icon icon="lucide:leaf" class="text-2xl text-brand-500"></iconify-icon></div><h3 class="text-base font-bold text-earth-500 mb-1.5">100% Natural</h3><p class="text-sm text-earth-500/55 leading-relaxed">No artificial colors, flavors, or preservatives. Pure, unadulterated spices as nature intended.</p></div>
+    <div class="bc bg-white rounded-2xl p-7 border border-earth-100/40"><div class="w-12 h-12 bg-gold-50 rounded-2xl flex items-center justify-center mb-4"><iconify-icon icon="lucide:sun" class="text-2xl text-gold-400"></iconify-icon></div><h3 class="text-base font-bold text-earth-500 mb-1.5">Farm Fresh</h3><p class="text-sm text-earth-500/55 leading-relaxed">Sun-dried and traditionally processed for maximum flavor and aroma retention.</p></div>
+    <div class="bc bg-white rounded-2xl p-7 border border-earth-100/40"><div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-4"><iconify-icon icon="lucide:shield-x" class="text-2xl text-red-400"></iconify-icon></div><h3 class="text-base font-bold text-earth-500 mb-1.5">No Chemicals</h3><p class="text-sm text-earth-500/55 leading-relaxed">Zero pesticide residues. Every batch lab-tested to meet the highest safety standards.</p></div>
+    <div class="bc bg-white rounded-2xl p-7 border border-earth-100/40"><div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center mb-4"><iconify-icon icon="lucide:truck" class="text-2xl text-blue-500"></iconify-icon></div><h3 class="text-base font-bold text-earth-500 mb-1.5">Fast Delivery</h3><p class="text-sm text-earth-500/55 leading-relaxed">Delivered in 3-5 business days across India in eco-friendly packaging.</p></div>
+    <div class="bc bg-white rounded-2xl p-7 border border-earth-100/40"><div class="w-12 h-12 bg-purple-50 rounded-2xl flex items-center justify-center mb-4"><iconify-icon icon="lucide:hand-heart" class="text-2xl text-purple-500"></iconify-icon></div><h3 class="text-base font-bold text-earth-500 mb-1.5">Supporting Farmers</h3><p class="text-sm text-earth-500/55 leading-relaxed">Fair trade practices ensuring farmers get the best prices for their hard work.</p></div>
+    <div class="bc bg-white rounded-2xl p-7 border border-earth-100/40"><div class="w-12 h-12 bg-amber-50 rounded-2xl flex items-center justify-center mb-4"><iconify-icon icon="lucide:badge-check" class="text-2xl text-amber-500"></iconify-icon></div><h3 class="text-base font-bold text-earth-500 mb-1.5">FSSAI Certified</h3><p class="text-sm text-earth-500/55 leading-relaxed">Licensed and certified. Complete transparency in quality and sourcing.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="py-20 lg:py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="text-center mb-12"><span class="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-50 border border-brand-100 rounded-full text-[11px] font-semibold text-brand-600 tracking-wider uppercase mb-4"><iconify-icon icon="lucide:message-circle" class="text-gold-400"></iconify-icon>Testimonials</span><h2 class="text-3xl lg:text-4xl font-bold text-earth-500 tracking-tight">Loved by Families</h2></div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div class="bg-cream-50 rounded-2xl p-6 border border-cream-200"><div class="flex gap-0.5 mb-3"><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon></div><p class="text-sm text-earth-500/65 leading-relaxed mb-4">"The cardamom is incredibly aromatic! Reminds me of the spices my grandmother used. The taste difference from store-bought is unbelievable."</p><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-brand-100 flex items-center justify-center text-xs font-bold text-brand-600">P</div><div><p class="text-sm font-semibold text-earth-500">Priya Murali</p><p class="text-[11px] text-earth-500/45">Chennai</p></div></div></div>
+    <div class="bg-cream-50 rounded-2xl p-6 border border-cream-200"><div class="flex gap-0.5 mb-3"><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon></div><p class="text-sm text-earth-500/65 leading-relaxed mb-4">"Best sesame oil I've ever used! The cold-pressed quality is evident in every dish. My whole family has switched to Naattu Suvai."</p><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-gold-100 flex items-center justify-center text-xs font-bold text-gold-600">R</div><div><p class="text-sm font-semibold text-earth-500">Rajesh Kumar</p><p class="text-[11px] text-earth-500/45">Coimbatore</p></div></div></div>
+    <div class="bg-cream-50 rounded-2xl p-6 border border-cream-200"><div class="flex gap-0.5 mb-3"><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon><iconify-icon icon="lucide:star" class="text-[#fcd34d] text-base"></iconify-icon></div><p class="text-sm text-earth-500/65 leading-relaxed mb-4">"The turmeric is so vibrant and pure! You can tell it's unadulterated. My mother-in-law was so impressed she ordered for all her relatives."</p><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-full bg-brand-100 flex items-center justify-center text-xs font-bold text-brand-600">S</div><div><p class="text-sm font-semibold text-earth-500">Sunita Sharma</p><p class="text-[11px] text-earth-500/45">Bangalore</p></div></div></div>
+  </div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 lg:py-24 bg-gradient-to-br from-brand-600 via-brand-700 to-brand-800 relative overflow-hidden">
+<div class="absolute inset-0 opacity-[.07]"><div class="absolute top-10 left-10 w-40 h-40 border border-white rounded-full"></div><div class="absolute bottom-10 right-10 w-60 h-60 border border-white rounded-full"></div><div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-white rounded-full"></div></div>
+<div class="max-w-3xl mx-auto px-4 text-center relative">
+  <div class="afl mb-5"><iconify-icon icon="lucide:package" class="text-5xl text-white/75"></iconify-icon></div>
+  <h2 class="text-3xl lg:text-5xl font-bold text-white tracking-tight mb-4">Ready to Taste the Difference?</h2>
+  <p class="text-base text-white/65 mb-8 max-w-xl mx-auto">Order now and experience the authentic flavor of pure, organic spices delivered fresh to your doorstep.</p>
+  <div class="flex flex-wrap justify-center gap-4">
+    <button onclick="nav('products')" class="btn-s bg-white text-brand-700 px-8 py-4 rounded-xl font-bold text-sm shadow-xl transition-all active:scale-[.98]">Order Now <iconify-icon icon="lucide:arrow-right" class="ml-1 inline-block"></iconify-icon></button>
+    <a href="https://wa.me/919876543210?text=Hi!%20I%20want%20to%20order%20spices" target="_blank" class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold text-sm shadow-xl transition-all"><iconify-icon icon="mdi:whatsapp" class="text-xl"></iconify-icon>WhatsApp Order</a>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- ==================== PRODUCTS PAGE ========================= -->
+<!-- ============================================================ -->
+<div id="pg-products" class="page">
+<section class="pt-24 pb-20 lg:pt-28 lg:pb-24 min-h-screen">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="text-center mb-8"><h1 class="text-3xl lg:text-4xl font-bold text-earth-500 tracking-tight">Our Products</h1><p class="mt-1 text-earth-500/50 text-sm">Explore our complete range of organic spices and oils</p></div>
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-3 mb-10">
+    <div class="relative w-full sm:w-72"><iconify-icon icon="lucide:search" class="absolute left-3 top-1/2 -translate-y-1/2 text-earth-300"></iconify-icon><input type="text" id="searchInput" oninput="renderProducts()" placeholder="Search spices..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-earth-200 text-sm bg-white"></div>
+    <div class="flex gap-2 flex-wrap justify-center">
+      <button onclick="setFilter('all')" data-f="all" class="fbtn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-brand-500 text-white shadow">All</button>
+      <button onclick="setFilter('spices')" data-f="spices" class="fbtn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white text-earth-500 border border-earth-200">Spices</button>
+      <button onclick="setFilter('powders')" data-f="powders" class="fbtn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white text-earth-500 border border-earth-200">Powders</button>
+      <button onclick="setFilter('oils')" data-f="oils" class="fbtn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white text-earth-500 border border-earth-200">Oils</button>
+    </div>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="prodGrid"></div>
+  <p id="noResults" class="hidden text-center text-earth-500/40 py-16 text-sm">No products found matching your search.</p>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- ==================== PRODUCT DETAIL ======================== -->
+<!-- ============================================================ -->
+<div id="pg-detail" class="page">
+<section class="pt-24 pb-20 lg:pt-28 lg:pb-24 min-h-screen">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <button onclick="nav('products')" class="inline-flex items-center gap-2 text-sm text-earth-500/55 hover:text-brand-600 mb-6 transition-colors"><iconify-icon icon="lucide:arrow-left"></iconify-icon>Back to Products</button>
+  <div class="grid lg:grid-cols-2 gap-10 lg:gap-14" id="detContent"></div>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- ==================== CART PAGE ============================= -->
+<!-- ============================================================ -->
+<div id="pg-cart" class="page">
+<section class="pt-24 pb-20 lg:pt-28 lg:pb-24 min-h-screen">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <h1 class="text-3xl font-bold text-earth-500 tracking-tight mb-1">Your Cart</h1>
+  <p class="text-earth-500/50 text-sm mb-8" id="cartSub">Review your items before checkout</p>
+  <div id="cartContent"></div>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- ==================== CHECKOUT PAGE ========================= -->
+<!-- ============================================================ -->
+<div id="pg-checkout" class="page">
+<section class="pt-24 pb-20 lg:pt-28 lg:pb-24 min-h-screen">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <button onclick="nav('cart')" class="inline-flex items-center gap-2 text-sm text-earth-500/55 hover:text-brand-600 mb-6 transition-colors"><iconify-icon icon="lucide:arrow-left"></iconify-icon>Back to Cart</button>
+  <h1 class="text-3xl font-bold text-earth-500 tracking-tight mb-8">Checkout</h1>
+  <div class="grid lg:grid-cols-5 gap-6">
+    <div class="lg:col-span-3">
+      <div class="bg-white rounded-2xl border border-earth-100 p-6 lg:p-8">
+        <h2 class="text-base font-bold text-earth-500 mb-5 flex items-center gap-2"><iconify-icon icon="lucide:user" class="text-brand-500"></iconify-icon>Delivery Details</h2>
+        <div class="space-y-4">
+          <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Full Name *</label><input type="text" id="cName" placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl border border-earth-200 text-sm"></div>
+          <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Phone Number *</label><input type="tel" id="cPhone" placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-earth-200 text-sm"></div>
+          <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Email (optional)</label><input type="email" id="cEmail" placeholder="you@email.com" class="w-full px-4 py-3 rounded-xl border border-earth-200 text-sm"></div>
+          <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Delivery Address *</label><textarea id="cAddr" rows="3" placeholder="House no, Street, Area, Landmark" class="w-full px-4 py-3 rounded-xl border border-earth-200 text-sm resize-none"></textarea></div>
+          <div class="grid grid-cols-2 gap-4">
+            <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Pincode *</label><div class="relative"><input type="text" id="cPin" maxlength="6" placeholder="600001" class="w-full px-4 py-3 rounded-xl border border-earth-200 text-sm pr-20"><button onclick="chkPin()" class="absolute right-1.5 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-brand-50 text-brand-600 text-[11px] font-semibold rounded-lg hover:bg-brand-100 transition-colors">Check</button></div><p id="pinMsg" class="text-[11px] mt-1 hidden"></p></div>
+            <div><label class="block text-xs font-medium text-earth-500/60 mb-1">City</label><input type="text" id="cCity" placeholder="Chennai" class="w-full px-4 py-3 rounded-xl border border-earth-200 text-sm"></div>
+          </div>
+        </div>
+        <h2 class="text-base font-bold text-earth-500 mt-8 mb-5 flex items-center gap-2"><iconify-icon icon="lucide:credit-card" class="text-brand-500"></iconify-icon>Payment Method</h2>
+        <div class="space-y-2" id="payMethods">
+          <label class="flex items-center gap-3 p-4 rounded-xl border-2 border-brand-500 bg-brand-50/50 cursor-pointer"><input type="radio" name="pay" value="upi" checked class="accent-brand-500"><iconify-icon icon="lucide:smartphone" class="text-xl text-brand-600"></iconify-icon><div><p class="text-sm font-semibold text-earth-500">UPI Payment</p><p class="text-[11px] text-earth-500/45">Google Pay, PhonePe, Paytm</p></div></label>
+          <label class="flex items-center gap-3 p-4 rounded-xl border-2 border-earth-200 hover:border-earth-300 cursor-pointer transition-colors"><input type="radio" name="pay" value="razorpay" class="accent-brand-500"><iconify-icon icon="lucide:credit-card" class="text-xl text-earth-400"></iconify-icon><div><p class="text-sm font-semibold text-earth-500">Razorpay</p><p class="text-[11px] text-earth-500/45">Cards, Net Banking, Wallets</p></div></label>
+          <label class="flex items-center gap-3 p-4 rounded-xl border-2 border-earth-200 hover:border-earth-300 cursor-pointer transition-colors"><input type="radio" name="pay" value="cod" class="accent-brand-500"><iconify-icon icon="lucide:banknote" class="text-xl text-earth-400"></iconify-icon><div><p class="text-sm font-semibold text-earth-500">Cash on Delivery</p><p class="text-[11px] text-earth-500/45">Pay when you receive</p></div></label>
+        </div>
+        <button onclick="placeOrder()" id="placeBtn" class="btn-s w-full mt-7 bg-brand-500 hover:bg-brand-600 text-white py-4 rounded-xl font-bold text-sm shadow-lg shadow-brand-500/25 transition-all active:scale-[.98]">Place Order — <span id="coTotalBtn">₹0</span></button>
+      </div>
+    </div>
+    <div class="lg:col-span-2"><div class="bg-white rounded-2xl border border-earth-100 p-6 sticky top-28"><h2 class="text-base font-bold text-earth-500 mb-4 flex items-center gap-2"><iconify-icon icon="lucide:receipt" class="text-brand-500"></iconify-icon>Order Summary</h2><div id="coItems" class="space-y-3 mb-4 max-h-56 overflow-y-auto"></div><div class="border-t border-earth-100 pt-3 space-y-1.5"><div class="flex justify-between text-sm"><span class="text-earth-500/55">Subtotal</span><span id="coSub" class="font-medium">₹0</span></div><div class="flex justify-between text-sm"><span class="text-earth-500/55">Delivery</span><span id="coDel" class="font-medium text-brand-600">Free</span></div><div class="flex justify-between text-base font-bold pt-2 border-t border-earth-100"><span>Total</span><span id="coTot" class="text-brand-600">₹0</span></div></div></div></div>
+  </div>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- ==================== ADMIN LOGIN =========================== -->
+<!-- ============================================================ -->
+<div id="pg-admin-login" class="page">
+<section class="min-h-screen flex items-center justify-center pt-16 pb-20 px-4" style="background:linear-gradient(135deg,#f0fdf0,#FFFDF7,#FFF9ED)">
+<div class="w-full max-w-md">
+  <div class="text-center mb-8"><div class="w-14 h-14 bg-brand-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg"><iconify-icon icon="lucide:shield-check" class="text-white text-2xl"></iconify-icon></div><h1 class="text-2xl font-bold text-earth-500">Admin Login</h1><p class="text-sm text-earth-500/50 mt-1">Naattu Suvai Dashboard</p></div>
+  <div class="bg-white rounded-2xl shadow-xl border border-earth-100 p-7">
+    <div class="space-y-4">
+      <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Email</label><input type="email" id="aEmail" placeholder="admin@naattusuvai.com" class="w-full px-4 py-3 rounded-xl border border-earth-200 text-sm"></div>
+      <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Password</label><input type="password" id="aPass" placeholder="Enter password" class="w-full px-4 py-3 rounded-xl border border-earth-200 text-sm" onkeydown="if(event.key==='Enter')adminLogin()"></div>
+      <p id="loginErr" class="text-xs text-red-500 hidden"></p>
+      <button onclick="adminLogin()" id="loginBtn" class="btn-s w-full bg-brand-500 hover:bg-brand-600 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-brand-500/25 transition-all active:scale-[.98]">Sign In</button>
+    </div>
+    <p class="text-[11px] text-earth-500/35 text-center mt-5">Demo: admin@naattusuvai.com / admin123</p>
+  </div>
+  <div class="text-center mt-6"><button onclick="nav('home')" class="text-sm text-earth-500/50 hover:text-brand-600 transition-colors"><iconify-icon icon="lucide:arrow-left" class="mr-1 inline-block"></iconify-icon>Back to Store</button></div>
+</div>
+</section>
+</div>
+
+<!-- ============================================================ -->
+<!-- ==================== ADMIN DASHBOARD ======================= -->
+<!-- ============================================================ -->
+<div id="pg-admin" class="page">
+<div class="flex min-h-screen">
+
+<aside id="adminSidebar" class="admin-side w-64 bg-gradient-to-b from-brand-800 to-brand-900 text-white flex-shrink-0 flex flex-col fixed lg:sticky top-0 h-screen z-50">
+  <div class="p-5 border-b border-white/10">
+    <div class="flex items-center gap-2"><div class="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center"><iconify-icon icon="lucide:leaf" class="text-white text-sm"></iconify-icon></div><div><span class="text-base font-bold">Naattu</span><span class="text-base font-bold text-gold-300"> Suvai</span></div></div>
+    <p class="text-[10px] text-white/40 mt-1 uppercase tracking-widest">Admin Panel</p>
+  </div>
+  <nav class="flex-1 p-3 space-y-1">
+    <button onclick="adminNav('overview')" data-an="overview" class="an-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 transition-all"><iconify-icon icon="lucide:layout-dashboard" class="text-lg"></iconify-icon>Overview</button>
+    <button onclick="adminNav('a-products')" data-an="a-products" class="an-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 transition-all"><iconify-icon icon="lucide:package" class="text-lg"></iconify-icon>Products</button>
+    <button onclick="adminNav('a-orders')" data-an="a-orders" class="an-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 transition-all"><iconify-icon icon="lucide:clipboard-list" class="text-lg"></iconify-icon>Orders</button>
+    <button onclick="adminNav('a-customers')" data-an="a-customers" class="an-btn w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 transition-all"><iconify-icon icon="lucide:users" class="text-lg"></iconify-icon>Customers</button>
+  </nav>
+  <div class="p-3 border-t border-white/10 space-y-1">
+    <button onclick="nav('home')" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm text-white/50 hover:text-white hover:bg-white/10 transition-all"><iconify-icon icon="lucide:store" class="text-lg"></iconify-icon>View Store</button>
+    <button onclick="adminLogout()" class="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm text-red-300 hover:text-red-200 hover:bg-red-500/10 transition-all"><iconify-icon icon="lucide:log-out" class="text-lg"></iconify-icon>Logout</button>
+  </div>
+</aside>
+
+<div id="adminOvr" class="fixed inset-0 overlay z-40 hidden lg:hidden" onclick="toggleAdminSide()"></div>
+
+<main class="flex-1 bg-cream-50 min-h-screen">
+  <div class="sticky top-0 z-30 bg-cream-50/90 backdrop-filter backdrop-blur-md border-b border-earth-100/50 px-4 sm:px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <button onclick="toggleAdminSide()" class="lg:hidden p-2 rounded-lg hover:bg-brand-50"><iconify-icon icon="lucide:menu" class="text-xl text-earth-500"></iconify-icon></button>
+      <h2 class="text-base font-bold text-earth-500" id="adminTitle">Dashboard Overview</h2>
+    </div>
+    <div class="flex items-center gap-2"><span class="text-xs text-earth-500/50 hidden sm:block">Admin</span><div class="w-8 h-8 bg-brand-100 rounded-full flex items-center justify-center text-xs font-bold text-brand-600">A</div></div>
+  </div>
+
+  <div class="p-4 sm:p-6 lg:p-8">
+
+    <!-- OVERVIEW -->
+    <div id="an-overview" class="admin-section">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="bg-white rounded-2xl border border-earth-100/50 p-5"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center"><iconify-icon icon="lucide:clipboard-list" class="text-xl text-brand-500"></iconify-icon></div><span class="badge bg-brand-50 text-brand-600">ALL</span></div><p class="text-2xl font-bold text-earth-500" id="stOrders">0</p><p class="text-xs text-earth-500/45">Total Orders</p></div>
+        <div class="bg-white rounded-2xl border border-earth-100/50 p-5"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 bg-gold-50 rounded-xl flex items-center justify-center"><iconify-icon icon="lucide:indian-rupee" class="text-xl text-gold-500"></iconify-icon></div><span class="badge bg-gold-50 text-gold-600">₹</span></div><p class="text-2xl font-bold text-earth-500" id="stRevenue">₹0</p><p class="text-xs text-earth-500/45">Total Revenue</p></div>
+        <div class="bg-white rounded-2xl border border-earth-100/50 p-5"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center"><iconify-icon icon="lucide:package" class="text-xl text-blue-500"></iconify-icon></div><span class="badge bg-blue-50 text-blue-600">SKU</span></div><p class="text-2xl font-bold text-earth-500" id="stProducts">0</p><p class="text-xs text-earth-500/45">Products</p></div>
+        <div class="bg-white rounded-2xl border border-earth-100/50 p-5"><div class="flex items-center justify-between mb-3"><div class="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center"><iconify-icon icon="lucide:users" class="text-xl text-purple-500"></iconify-icon></div><span class="badge bg-purple-50 text-purple-600">★</span></div><p class="text-2xl font-bold text-earth-500" id="stCustomers">0</p><p class="text-xs text-earth-500/45">Customers</p></div>
+      </div>
+      <div class="bg-white rounded-2xl border border-earth-100/50 p-6 mb-6"><h3 class="text-sm font-bold text-earth-500 mb-4">Revenue by Category</h3><div class="space-y-3" id="revChart"></div></div>
+      <div class="bg-white rounded-2xl border border-earth-100/50 p-6">
+        <div class="flex justify-between items-center mb-4"><h3 class="text-sm font-bold text-earth-500">Recent Orders</h3><button onclick="adminNav('a-orders')" class="text-xs text-brand-600 hover:text-brand-700 font-medium">View All →</button></div>
+        <div class="overflow-x-auto"><table class="w-full text-sm"><thead><tr class="text-left text-[10px] text-earth-500/45 uppercase tracking-wider border-b border-earth-100"><th class="pb-3 pr-4">Order ID</th><th class="pb-3 pr-4">Customer</th><th class="pb-3 pr-4">Amount</th><th class="pb-3 pr-4">Status</th><th class="pb-3">Date</th></tr></thead><tbody id="recentOrdBody" class="divide-y divide-earth-50"></tbody></table></div>
+      </div>
+    </div>
+
+    <!-- PRODUCT MANAGEMENT -->
+    <div id="an-a-products" class="admin-section hidden">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-6">
+        <p class="text-sm text-earth-500/50"><span id="prodCount">0</span> products</p>
+        <button onclick="openProdModal()" class="flex items-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all active:scale-[.98]"><iconify-icon icon="lucide:plus"></iconify-icon>Add Product</button>
+      </div>
+      <div class="bg-white rounded-2xl border border-earth-100/50 overflow-hidden">
+        <div class="overflow-x-auto"><table class="w-full text-sm"><thead><tr class="text-left text-[10px] text-earth-500/45 uppercase tracking-wider bg-cream-50 border-b border-earth-100"><th class="p-4">Product</th><th class="p-4">Category</th><th class="p-4">Base Price</th><th class="p-4">Stock</th><th class="p-4">Featured</th><th class="p-4">Actions</th></tr></thead><tbody id="aProdBody" class="divide-y divide-earth-50"></tbody></table></div>
+      </div>
+    </div>
+
+    <!-- ORDER MANAGEMENT -->
+    <div id="an-a-orders" class="admin-section hidden">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-6">
+        <p class="text-sm text-earth-500/50"><span id="ordCount">0</span> orders</p>
+        <select id="ordFilter" onchange="renderAOrders()" class="px-3 py-2 rounded-lg border border-earth-200 text-xs bg-white"><option value="all">All Status</option><option value="pending">Pending</option><option value="shipped">Shipped</option><option value="delivered">Delivered</option><option value="cancelled">Cancelled</option></select>
+      </div>
+      <div class="bg-white rounded-2xl border border-earth-100/50 overflow-hidden">
+        <div class="overflow-x-auto"><table class="w-full text-sm"><thead><tr class="text-left text-[10px] text-earth-500/45 uppercase tracking-wider bg-cream-50 border-b border-earth-100"><th class="p-4">Order ID</th><th class="p-4">Customer</th><th class="p-4">Items</th><th class="p-4">Total</th><th class="p-4">Payment</th><th class="p-4">Status</th><th class="p-4">Actions</th></tr></thead><tbody id="aOrdBody" class="divide-y divide-earth-50"></tbody></table></div>
+      </div>
+    </div>
+
+    <!-- CUSTOMER MANAGEMENT -->
+    <div id="an-a-customers" class="admin-section hidden">
+      <p class="text-sm text-earth-500/50 mb-6"><span id="custCount">0</span> customers</p>
+      <div class="bg-white rounded-2xl border border-earth-100/50 overflow-hidden">
+        <div class="overflow-x-auto"><table class="w-full text-sm"><thead><tr class="text-left text-[10px] text-earth-500/45 uppercase tracking-wider bg-cream-50 border-b border-earth-100"><th class="p-4">Customer</th><th class="p-4">Phone</th><th class="p-4">City</th><th class="p-4">Orders</th><th class="p-4">Total Spent</th></tr></thead><tbody id="aCustBody" class="divide-y divide-earth-50"></tbody></table></div>
+      </div>
+    </div>
+
+  </div>
+</main>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- ==================== FOOTER ================================ -->
+<!-- ============================================================ -->
+<footer id="custFooter" class="bg-earth-500 text-white/75">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-2 mb-4"><div class="w-9 h-9 bg-brand-500 rounded-lg flex items-center justify-center"><iconify-icon icon="lucide:leaf" class="text-white text-lg"></iconify-icon></div><div><span class="text-lg font-bold text-white">Naattu</span><span class="text-lg font-bold text-gold-300"> Suvai</span></div></div>
+      <p class="text-sm text-white/45 leading-relaxed mb-4">Bringing authentic taste of pure, organic spices from South Indian farms to your kitchen since 2020.</p>
+      <div class="flex gap-2"><a href="#" class="w-9 h-9 bg-white/10 hover:bg-brand-500 rounded-lg flex items-center justify-center transition-colors"><iconify-icon icon="mdi:instagram" class="text-lg"></iconify-icon></a><a href="#" class="w-9 h-9 bg-white/10 hover:bg-brand-500 rounded-lg flex items-center justify-center transition-colors"><iconify-icon icon="mdi:facebook" class="text-lg"></iconify-icon></a><a href="#" class="w-9 h-9 bg-white/10 hover:bg-brand-500 rounded-lg flex items-center justify-center transition-colors"><iconify-icon icon="mdi:youtube" class="text-lg"></iconify-icon></a><a href="#" class="w-9 h-9 bg-white/10 hover:bg-brand-500 rounded-lg flex items-center justify-center transition-colors"><iconify-icon icon="mdi:twitter" class="text-lg"></iconify-icon></a></div>
+    </div>
+    <div><h4 class="text-xs font-bold text-white mb-4 uppercase tracking-widest">Quick Links</h4><ul class="space-y-2"><li><a href="#" onclick="nav('home');return false" class="text-sm text-white/45 hover:text-gold-300 transition-colors">Home</a></li><li><a href="#" onclick="nav('products');return false" class="text-sm text-white/45 hover:text-gold-300 transition-colors">Products</a></li><li><a href="#" onclick="nav('cart');return false" class="text-sm text-white/45 hover:text-gold-300 transition-colors">Cart</a></li></ul></div>
+    <div><h4 class="text-xs font-bold text-white mb-4 uppercase tracking-widest">Categories</h4><ul class="space-y-2"><li><a href="#" onclick="nav('products');setTimeout(setFilter,50,'spices');return false" class="text-sm text-white/45 hover:text-gold-300 transition-colors">Whole Spices</a></li><li><a href="#" onclick="nav('products');setTimeout(setFilter,50,'powders');return false" class="text-sm text-white/45 hover:text-gold-300 transition-colors">Spice Powders</a></li><li><a href="#" onclick="nav('products');setTimeout(setFilter,50,'oils');return false" class="text-sm text-white/45 hover:text-gold-300 transition-colors">Cold-Pressed Oils</a></li></ul></div>
+    <div><h4 class="text-xs font-bold text-white mb-4 uppercase tracking-widest">Contact</h4><ul class="space-y-2.5"><li class="flex items-start gap-2"><iconify-icon icon="lucide:map-pin" class="text-gold-300 mt-0.5 flex-shrink-0"></iconify-icon><span class="text-sm text-white/45">123 Temple Street, Madurai, TN 625001</span></li><li class="flex items-center gap-2"><iconify-icon icon="lucide:phone" class="text-gold-300 flex-shrink-0"></iconify-icon><a href="tel:+919876543210" class="text-sm text-white/45 hover:text-gold-300 transition-colors">+91 98765 43210</a></li><li class="flex items-center gap-2"><iconify-icon icon="lucide:mail" class="text-gold-300 flex-shrink-0"></iconify-icon><a href="mailto:hello@naattusuvai.com" class="text-sm text-white/45 hover:text-gold-300 transition-colors">hello@naattusuvai.com</a></li></ul></div>
+  </div>
+  <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3"><p class="text-[11px] text-white/30">© 2025 Naattu Suvai. All rights reserved.</p><div class="flex gap-4 text-[11px] text-white/30"><a href="#" class="hover:text-white/50">Privacy Policy</a><a href="#" class="hover:text-white/50">Terms of Service</a><a href="#" class="hover:text-white/50">Refund Policy</a></div></div>
+</div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/919876543210" target="_blank" id="waFloat" class="wa-pulse fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-xl hover:shadow-2xl hover:scale-110 transition-all" title="WhatsApp Order"><iconify-icon icon="mdi:whatsapp" class="text-white text-3xl"></iconify-icon></a>
+
+<!-- ============================================================ -->
+<!-- ==================== MODALS ================================ -->
+<!-- ============================================================ -->
+
+<!-- PRODUCT ADD/EDIT MODAL -->
+<div id="prodModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+<div class="absolute inset-0 overlay" onclick="closeProdModal()"></div>
+<div class="relative bg-white rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl asi">
+  <div class="sticky top-0 bg-white border-b border-earth-100 p-5 flex justify-between items-center rounded-t-2xl z-10"><h3 class="text-base font-bold text-earth-500" id="pmTitle">Add Product</h3><button onclick="closeProdModal()" class="p-1.5 rounded-lg hover:bg-earth-100"><iconify-icon icon="lucide:x" class="text-lg text-earth-400"></iconify-icon></button></div>
+  <div class="p-5 space-y-4">
+    <input type="hidden" id="pmId">
+    <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Product Name *</label><input type="text" id="pmName" placeholder="e.g. Green Cardamom" class="w-full px-4 py-2.5 rounded-xl border border-earth-200 text-sm"></div>
+    <div class="grid grid-cols-2 gap-4">
+      <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Category *</label><select id="pmCat" class="w-full px-4 py-2.5 rounded-xl border border-earth-200 text-sm bg-white"><option value="spices">Spices</option><option value="powders">Powders</option><option value="oils">Oils</option></select></div>
+      <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Tag (optional)</label><input type="text" id="pmTag" placeholder="Bestseller" class="w-full px-4 py-2.5 rounded-xl border border-earth-200 text-sm"></div>
+    </div>
+    <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Image URL *</label><input type="text" id="pmImg" placeholder="https://example.com/image.jpg" class="w-full px-4 py-2.5 rounded-xl border border-earth-200 text-sm"></div>
+    <div><label class="block text-xs font-medium text-earth-500/60 mb-1">Description *</label><textarea id="pmDesc" rows="3" placeholder="Describe the product..." class="w-full px-4 py-2.5 rounded-xl border border-earth-200 text-sm resize-none"></textarea></div>
+    <div>
+      <label class="block text-xs font-medium text-earth-500/60 mb-2">Weight Options & Prices *</label>
+      <div id="pmWeights" class="space-y-2"></div>
+      <button onclick="addWeightRow()" class="mt-2 text-xs text-brand-600 hover:text-brand-700 font-semibold flex items-center gap-1"><iconify-icon icon="lucide:plus"></iconify-icon>Add Weight Option</button>
+    </div>
+    <div class="flex items-center gap-3"><input type="checkbox" id="pmFeat" class="accent-brand-500 w-4 h-4"><label for="pmFeat" class="text-sm text-earth-500/70">Featured product (shows on homepage)</label></div>
+  </div>
+  <div class="sticky bottom-0 bg-white border-t border-earth-100 p-5 flex gap-3 rounded-b-2xl">
+    <button onclick="closeProdModal()" class="flex-1 border-2 border-earth-200 text-earth-500 py-3 rounded-xl font-semibold text-sm hover:bg-earth-50 transition-all">Cancel</button>
+    <button onclick="saveProduct()" class="btn-s flex-1 bg-brand-500 hover:bg-brand-600 text-white py-3 rounded-xl font-semibold text-sm transition-all">Save Product</button>
+  </div>
+</div>
+</div>
+
+<!-- ORDER DETAIL MODAL -->
+<div id="ordModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+<div class="absolute inset-0 overlay" onclick="closeOrdModal()"></div>
+<div class="relative bg-white rounded-2xl w-full max-w-md max-h-[90vh] overflow-y-auto shadow-2xl asi">
+  <div class="sticky top-0 bg-white border-b border-earth-100 p-5 flex justify-between items-center rounded-t-2xl z-10"><h3 class="text-base font-bold text-earth-500" id="omTitle">Order Details</h3><button onclick="closeOrdModal()" class="p-1.5 rounded-lg hover:bg-earth-100"><iconify-icon icon="lucide:x" class="text-lg text-earth-400"></iconify-icon></button></div>
+  <div class="p-5" id="omContent"></div>
+</div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div id="successModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+<div class="absolute inset-0 overlay" onclick="closeSuccess()"></div>
+<div class="relative bg-white rounded-2xl p-8 lg:p-10 max-w-sm w-full text-center shadow-2xl asi">
+  <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-5"><iconify-icon icon="lucide:check-circle-2" class="text-4xl text-brand-500"></iconify-icon></div>
+  <h2 class="text-xl font-bold text-earth-500 mb-1">Order Placed!</h2>
+  <p class="text-sm text-earth-500/50 mb-5">Thank you! We'll process your order shortly.</p>
+  <div class="bg-cream-50 rounded-xl p-3 mb-5"><p class="text-[10px] text-earth-500/40">Order ID</p><p class="text-lg font-bold text-brand-600" id="sOrderId">NS-000000</p></div>
+  <button onclick="closeSuccess();nav('home')" class="w-full bg-brand-500 hover:bg-brand-600 text-white py-3 rounded-xl font-semibold text-sm transition-all">Continue Shopping</button>
+</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- ==================== JAVASCRIPT ============================ -->
+<!-- ============================================================ -->
+<script>
+// ==================== DATABASE LAYER ====================
+// Uses localStorage as a client-side DB.
+// In production, replace DB.get/post/put/del with fetch() to your backend API.
+const DB={
+  get(k,fb=[]){try{return JSON.parse(localStorage.getItem('ns_'+k))||fb}catch{return fb}},
+  set(k,v){localStorage.setItem('ns_'+k,JSON.stringify(v))}
+};
+
+// Seed data on first visit
+if(!DB.get('seeded',false)){
+  DB.set('products',[
+    {id:'p1',name:'Green Cardamom',category:'spices',image:'https://picsum.photos/seed/cardamom-green-pods/500/500',desc:'Premium grade green cardamom pods, handpicked from the Western Ghats. Intensely aromatic with a sweet, spicy flavor perfect for biryanis, chai, and desserts.',tag:'Bestseller',featured:true,active:true,weights:[{label:'100g',price:220,stock:50},{label:'250g',price:520,stock:30},{label:'500g',price:980,stock:20},{label:'1kg',price:1850,stock:10}],createdAt:Date.now()},
+    {id:'p2',name:'Black Pepper',category:'spices',image:'https://picsum.photos/seed/black-pepper-corns/500/500',desc:'Bold, pungent Malabar black pepper with excellent oil content. Perfect for seasoning, marinades, and traditional South Indian cooking.',tag:'Popular',featured:true,active:true,weights:[{label:'100g',price:120,stock:60},{label:'250g',price:280,stock:40},{label:'500g',price:520,stock:25},{label:'1kg',price:980,stock:15}],createdAt:Date.now()},
+    {id:'p3',name:'Turmeric Powder',category:'powders',image:'https://picsum.photos/seed/turmeric-powder-gold/500/500',desc:'Pure Lakadong turmeric with 7-9% curcumin content. Stone-ground to preserve nutrients. Adds vibrant color and health benefits to every dish.',tag:'High Curcumin',featured:true,active:true,weights:[{label:'100g',price:80,stock:70},{label:'250g',price:180,stock:50},{label:'500g',price:340,stock:30},{label:'1kg',price:640,stock:20}],createdAt:Date.now()},
+    {id:'p4',name:'Cold-Pressed Sesame Oil',category:'oils',image:'https://picsum.photos/seed/sesame-oil-bottle/500/500',desc:'Traditional chekku (wood-pressed) sesame oil. Rich in antioxidants and Vitamin E. Ideal for cooking, hair care, and oil pulling.',tag:'Chekku Oil',featured:true,active:true,weights:[{label:'250ml',price:220,stock:40},{label:'500ml',price:400,stock:30},{label:'1L',price:750,stock:20},{label:'2L',price:1400,stock:10}],createdAt:Date.now()},
+    {id:'p5',name:'Star Anise',category:'spices',image:'https://picsum.photos/seed/star-anise-whole/500/500',desc:'Whole star anise with a warm, sweet licorice flavor. Essential for biryanis, masala chai, and pho. Sourced from premium farms.',tag:null,featured:false,active:true,weights:[{label:'50g',price:150,stock:35},{label:'100g',price:280,stock:25},{label:'250g',price:650,stock:15},{label:'500g',price:1200,stock:8}],createdAt:Date.now()},
+    {id:'p6',name:'Red Chilli Powder',category:'powders',image:'https://picsum.photos/seed/chilli-powder-red/500/500',desc:'Medium-hot Kashmiri-Guntur blend chilli powder. Deep red color without artificial additives. Perfect heat level for everyday cooking.',tag:null,featured:false,active:true,weights:[{label:'100g',price:60,stock:80},{label:'250g',price:140,stock:60},{label:'500g',price:260,stock:35},{label:'1kg',price:490,stock:20}],createdAt:Date.now()},
+    {id:'p7',name:'Coriander Seeds',category:'spices',image:'https://picsum.photos/seed/coriander-seeds-dried/500/500',desc:'Dry and clean coriander seeds with a citrusy, nutty flavor. Essential for sambar powder, garam masala, and pickles.',tag:null,featured:false,active:true,weights:[{label:'100g',price:50,stock:90},{label:'250g',price:110,stock:60},{label:'500g',price:200,stock:35},{label:'1kg',price:380,stock:20}],createdAt:Date.now()},
+    {id:'p8',name:'Cold-Pressed Groundnut Oil',category:'oils',image:'https://picsum.photos/seed/groundnut-oil-natural/500/500',desc:'Traditional wood-pressed groundnut oil with authentic nutty aroma. High smoke point makes it perfect for deep frying and everyday cooking.',tag:'Traditional',featured:false,active:true,weights:[{label:'250ml',price:180,stock:45},{label:'500ml',price:340,stock:30},{label:'1L',price:640,stock:20},{label:'2L',price:1200,stock:10}],createdAt:Date.now()},
+    {id:'p9',name:'Clove (Whole)',category:'spices',image:'https://picsum.photos/seed/clove-whole-spice/500/500',desc:'Hand-sorted whole cloves with high volatile oil content. Intensely aromatic — used in biryanis, pulao, and dental care.',tag:null,featured:false,active:true,weights:[{label:'50g',price:120,stock:40},{label:'100g',price:230,stock:30},{label:'250g',price:550,stock:18},{label:'500g',price:1050,stock:10}],createdAt:Date.now()},
+    {id:'p10',name:'Cumin Seeds',category:'spices',image:'https://picsum.photos/seed/cumin-seeds-jeera/500/500',desc:'Premium whole cumin (jeera) with strong earthy aroma. A staple in Indian kitchens — perfect for tempering and masala preparation.',tag:null,featured:false,active:true,weights:[{label:'100g',price:60,stock:75},{label:'250g',price:140,stock:50},{label:'500g',price:260,stock:30},{label:'1kg',price:490,stock:18}],createdAt:Date.now()},
+    {id:'p11',name:'Garam Masala Powder',category:'powders',image:'https://picsum.photos/seed/garam-masala-mix/500/500',desc:'Aromatic blend of 12 premium spices, stone-ground in small batches. Adds rich, warm flavor to curries, gravies, and biryanis.',tag:'Signature Blend',featured:false,active:true,weights:[{label:'100g',price:100,stock:55},{label:'250g',price:230,stock:35},{label:'500g',price:440,stock:20},{label:'1kg',price:840,stock:12}],createdAt:Date.now()},
+    {id:'p12',name:'Cold-Pressed Coconut Oil',category:'oils',image:'https://picsum.photos/seed/coconut-oil-jar/500/500',desc:'Virgin coconut oil extracted from fresh mature coconuts using traditional cold-press method. Pure white, aromatic, and chemical-free.',tag:'Virgin',featured:false,active:true,weights:[{label:'250ml',price:200,stock:50},{label:'500ml',price:380,stock:35},{label:'1L',price:720,stock:22},{label:'2L',price:1380,stock:12}],createdAt:Date.now()}
+  ]);
+  DB.set('orders',[]);
+  DB.set('seeded',true);
+}
+
+function getProducts(){return DB.get('products',[]).filter(p=>p.active!==false)}
+function getAllProducts(){return DB.get('products',[])}
+function getOrders(){return DB.get('orders',[])}
+function getCart(){return DB.get('cart',[])}
+function setCart(c){DB.set('cart',c);updateBadge()}
+
+// ==================== TOAST ====================
+function toast(msg,type='success'){
+  const c=document.getElementById('toasts'),t=document.createElement('div');
+  const ic={success:'lucide:check-circle-2',error:'lucide:alert-circle',info:'lucide:info'};
+  const bg={success:'bg-brand-500',error:'bg-red-500',info:'bg-blue-500'};
+  t.className=`toast pointer-events-auto flex items-center gap-3 ${bg[type]} text-white px-5 py-3 rounded-xl shadow-xl text-sm font-medium`;
+  t.innerHTML=`<iconify-icon icon="${ic[type]}" class="text-lg flex-shrink-0"></iconify-icon><span>${msg}</span>`;
+  c.appendChild(t);
+  setTimeout(()=>{t.classList.add('out');setTimeout(()=>t.remove(),250)},3000);
+}
+
+// ==================== NAVIGATION ====================
+let curFilter='all';
+function nav(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const el=document.getElementById('pg-'+page);
+  if(el){el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+  const isCust=['home','products','detail','cart','checkout'].includes(page);
+  document.getElementById('custNav').style.display=isCust?'':'none';
+  document.getElementById('custFooter').style.display=isCust?'':'none';
+  document.getElementById('waFloat').style.display=isCust?'':'none';
+  if(page==='products')renderProducts();
+  if(page==='cart')renderCart();
+  if(page==='checkout')renderCheckout();
+  if(page==='admin'){if(!isLoggedIn()){nav('admin-login');return}renderAdmin()}
+}
+function toggleMob(){document.getElementById('mobMenu').classList.toggle('open');document.getElementById('mobOvr').classList.toggle('hidden')}
+
+// ==================== PRODUCT CARD ====================
+function pCard(p){
+  const totalStock=p.weights.reduce((s,w)=>s+(w.stock||0),0);
+  return `<div class="pc bg-white rounded-2xl border border-earth-100/40 overflow-hidden group cursor-pointer" onclick="showDetail('${p.id}')">
+    <div class="relative overflow-hidden"><img src="${p.image}" alt="${p.name}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://picsum.photos/seed/spice-fallback/500/500'">
+    ${p.tag?`<span class="absolute top-3 left-3 px-2.5 py-1 bg-brand-500 text-white text-[10px] font-bold uppercase tracking-wider rounded-lg shadow-sm">${p.tag}</span>`:''}
+    ${totalStock<10&&totalStock>0?`<span class="absolute top-3 right-3 px-2 py-0.5 bg-red-50 text-red-600 text-[9px] font-bold rounded-md">Low Stock</span>`:''}
+    </div>
+    <div class="p-4"><p class="text-[10px] font-semibold text-brand-500 uppercase tracking-widest mb-0.5">${p.category}</p>
+    <h3 class="text-sm font-bold text-earth-500 mb-1 group-hover:text-brand-600 transition-colors">${p.name}</h3>
+    <p class="text-xs text-earth-500/45 mb-3 line-clamp-2">${p.desc.substring(0,65)}...</p>
+    <div class="flex items-center justify-between"><div><span class="text-base font-bold text-brand-600">₹${p.weights[0].price}</span><span class="text-[10px] text-earth-500/35 ml-0.5">/ ${p.weights[0].label}</span></div>
+    <button onclick="event.stopPropagation();quickAdd('${p.id}')" class="w-8 h-8 bg-brand-50 hover:bg-brand-500 text-brand-500 hover:text-white rounded-lg flex items-center justify-center transition-all active:scale-90"><iconify-icon icon="lucide:plus" class="text-base"></iconify-icon></button></div></div></div>`;
+}
+
+// ==================== FEATURED ====================
+function renderFeatured(){document.getElementById('featGrid').innerHTML=getProducts().filter(p=>p.featured).map(pCard).join('')}
+
+// ==================== PRODUCTS PAGE ====================
+function renderProducts(){
+  const q=(document.getElementById('searchInput')?.value||'').toLowerCase();
+  let list=getProducts();
+  if(curFilter!=='all')list=list.filter(p=>p.category===curFilter);
+  if(q)list=list.filter(p=>p.name.toLowerCase().includes(q)||p.category.includes(q)||(p.tag||'').toLowerCase().includes(q));
+  document.getElementById('prodGrid').innerHTML=list.map(pCard).join('');
+  document.getElementById('noResults').classList.toggle('hidden',list.length>0);
+}
+function setFilter(f){
+  curFilter=f;
+  document.querySelectorAll('.fbtn').forEach(b=>{
+    b.className=b.dataset.f===f?'fbtn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-brand-500 text-white shadow':'fbtn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-white text-earth-500 border border-earth-200';
+  });
+  renderProducts();
+}
+function quickAdd(id){const p=getProducts().find(x=>x.id===id);if(p)addToCart(p,0,1)}
+
+// ==================== PRODUCT DETAIL ====================
+let _dp,_dw=0,_dq=1;
+function showDetail(id){
+  const p=getProducts().find(x=>x.id===id);if(!p)return;
+  _dp=p;_dw=0;_dq=1;nav('detail');
+  const wh=p.weights.map((w,i)=>`<button onclick="selW(${i})" class="wopt ${i===0?'sel':''} border-2 border-earth-200 px-4 py-2 rounded-xl text-sm font-medium transition-all" data-i="${i}"><span class="block font-bold text-sm">${w.label}</span><span class="block text-[11px] mt-0.5 opacity-70">₹${w.price}</span></button>`).join('');
+  const stock=p.weights[0].stock;
+  document.getElementById('detContent').innerHTML=`
+    <div class="asr"><div class="rounded-2xl overflow-hidden shadow-lg"><img src="${p.image}" alt="${p.name}" class="w-full h-[340px] sm:h-[440px] lg:h-[540px] object-cover" onerror="this.src='https://picsum.photos/seed/spice-fallback/500/500'"></div></div>
+    <div class="afu d2">
+      ${p.tag?`<span class="inline-block px-3 py-1 bg-brand-50 text-brand-600 text-[10px] font-bold uppercase tracking-wider rounded-lg mb-3">${p.tag}</span>`:''}
+      <p class="text-[10px] font-semibold text-brand-500 uppercase tracking-widest mb-1.5">${p.category}</p>
+      <h1 class="text-2xl lg:text-3xl font-bold text-earth-500 tracking-tight mb-2">${p.name}</h1>
+      <div class="flex items-center gap-2 mb-4"><div class="flex gap-0.5">${'<iconify-icon icon="lucide:star" class="text-[#fcd34d] text-sm"></iconify-icon>'.repeat(5)}</div><span class="text-[11px] text-earth-500/40">4.9 (128 reviews)</span></div>
+      <div class="flex items-baseline gap-2 mb-1"><span class="text-2xl font-bold text-brand-600" id="dPrice">₹${p.weights[0].price}</span><span class="text-sm text-earth-500/35" id="dWt">/ ${p.weights[0].label}</span></div>
+      <p class="text-xs ${stock>10?'text-brand-600':'text-red-500'} mb-5">${stock>10?'In Stock':'Only '+stock+' left'}</p>
+      <p class="text-sm text-earth-500/55 leading-relaxed mb-7">${p.desc}</p>
+      <div class="mb-5"><label class="block text-[10px] font-semibold text-earth-500/60 mb-2 uppercase tracking-wider">Select Weight</label><div class="grid grid-cols-4 gap-2" id="wSel">${wh}</div></div>
+      <div class="mb-7"><label class="block text-[10px] font-semibold text-earth-500/60 mb-2 uppercase tracking-wider">Quantity</label><div class="flex items-center gap-1 w-fit"><button onclick="chgQ(-1)" class="w-10 h-10 border-2 border-earth-200 rounded-xl flex items-center justify-center hover:border-brand-400 hover:text-brand-600 transition-all active:scale-90"><iconify-icon icon="lucide:minus"></iconify-icon></button><span class="w-12 h-10 flex items-center justify-center text-base font-bold text-earth-500" id="dQty">1</span><button onclick="chgQ(1)" class="w-10 h-10 border-2 border-earth-200 rounded-xl flex items-center justify-center hover:border-brand-400 hover:text-brand-600 transition-all active:scale-90"><iconify-icon icon="lucide:plus"></iconify-icon></button></div></div>
+      <div class="flex gap-3"><button onclick="addDetCart()" class="btn-s flex-1 bg-brand-500 hover:bg-brand-600 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg shadow-brand-500/25 transition-all active:scale-[.98]"><iconify-icon icon="lucide:shopping-bag" class="mr-1.5 inline-block"></iconify-icon>Add to Cart</button><button onclick="addDetCart();nav('checkout')" class="flex-1 border-2 border-brand-500 text-brand-600 hover:bg-brand-50 py-3.5 rounded-xl font-bold text-sm transition-all">Buy Now</button></div>
+      <div class="grid grid-cols-3 gap-3 mt-7 pt-6 border-t border-earth-100"><div class="text-center"><iconify-icon icon="lucide:truck" class="text-xl text-brand-500 mb-1"></iconify-icon><p class="text-[10px] text-earth-500/40 font-medium">Free Delivery</p></div><div class="text-center"><iconify-icon icon="lucide:shield-check" class="text-xl text-brand-500 mb-1"></iconify-icon><p class="text-[10px] text-earth-500/40 font-medium">100% Genuine</p></div><div class="text-center"><iconify-icon icon="lucide:rotate-ccw" class="text-xl text-brand-500 mb-1"></iconify-icon><p class="text-[10px] text-earth-500/40 font-medium">Easy Returns</p></div></div>
+    </div>`;
+}
+function selW(i){_dw=i;document.querySelectorAll('.wopt').forEach((b,j)=>b.classList.toggle('sel',j===i));document.getElementById('dPrice').textContent='₹'+_dp.weights[i].price;document.getElementById('dWt').textContent='/ '+_dp.weights[i].label}
+function chgQ(d){_dq=Math.max(1,Math.min(10,_dq+d));document.getElementById('dQty').textContent=_dq}
+function addDetCart(){addToCart(_dp,_dw,_dq)}
+
+// ==================== CART ====================
+function addToCart(product,wIdx,qty){
+  const w=product.weights[wIdx],key=product.id+'-'+wIdx;
+  let cart=getCart(),ex=cart.find(c=>c.key===key);
+  if(ex)ex.qty=Math.min(10,ex.qty+qty);
+  else cart.push({key,id:product.id,name:product.name,image:product.image,weight:w.label,price:w.price,qty});
+  setCart(cart);toast(`${product.name} (${w.label}) added`);
+}
+function removeFromCart(key){setCart(getCart().filter(c=>c.key!==key));renderCart()}
+function updateCartQty(key,d){
+  let cart=getCart(),item=cart.find(c=>c.key===key);if(!item)return;
+  item.qty=Math.max(1,Math.min(10,item.qty+d));setCart(cart);renderCart();
+}
+function updateBadge(){
+  const n=getCart().reduce((s,c)=>s+c.qty,0),b=document.getElementById('cartBadge');
+  if(n>0){b.textContent=n;b.classList.remove('hidden')}else b.classList.add('hidden');
+}
+function cartTotal(){return getCart().reduce((s,c)=>s+c.price*c.qty,0)}
+function waLink(){
+  let m='🌱 *Naattu Suvai Order*\n\n';
+  getCart().forEach(c=>{m+=`• ${c.name} (${c.weight}) × ${c.qty} — ₹${c.price*c.qty}\n`});
+  const t=cartTotal(),d=t>=500?0:49;
+  m+=`\n💰 Total: ₹${t+d}${d===0?'\n🚚 Delivery: Free':`\n🚚 Delivery: ₹${d}`}\n\nPlease share your delivery address.`;
+  return 'https://wa.me/919876543210?text='+encodeURIComponent(m);
+}
+function renderCart(){
+  const cart=getCart(),c=document.getElementById('cartContent'),sub=document.getElementById('cartSub');
+  if(!cart.length){
+    sub.textContent='Your cart is empty';
+    c.innerHTML=`<div class="text-center py-16"><iconify-icon icon="lucide:shopping-bag" class="text-5xl text-earth-200 mb-3"></iconify-icon><h3 class="text-lg font-bold text-earth-500 mb-1">No items yet</h3><p class="text-sm text-earth-500/40 mb-5">Explore our premium spice collection</p><button onclick="nav('products')" class="bg-brand-500 hover:bg-brand-600 text-white px-7 py-3 rounded-xl font-semibold text-sm transition-all">Browse Products</button></div>`;
+    return;
+  }
+  sub.textContent=`${cart.length} item${cart.length>1?'s':''} in your cart`;
+  const t=cartTotal(),d=t>=500?0:49;
+  c.innerHTML=`<div class="space-y-3 mb-5">${cart.map(i=>`<div class="flex gap-4 bg-white rounded-2xl border border-earth-100/40 p-4 afi"><img src="${i.image}" alt="${i.name}" class="w-16 h-16 rounded-xl object-cover flex-shrink-0" onerror="this.src='https://picsum.photos/seed/spice-fallback/100/100'"><div class="flex-1 min-w-0"><div class="flex justify-between items-start gap-2"><div><h3 class="text-sm font-bold text-earth-500">${i.name}</h3><p class="text-[11px] text-earth-500/40">${i.weight}</p></div><button onclick="removeFromCart('${i.key}')" class="p-1 text-earth-300 hover:text-red-400 transition-colors"><iconify-icon icon="lucide:trash-2" class="text-base"></iconify-icon></button></div><div class="flex items-center justify-between mt-2.5"><div class="flex items-center gap-1"><button onclick="updateCartQty('${i.key}',-1)" class="w-7 h-7 border border-earth-200 rounded-lg flex items-center justify-center hover:border-brand-400 text-xs"><iconify-icon icon="lucide:minus"></iconify-icon></button><span class="w-8 h-7 flex items-center justify-center text-sm font-bold">${i.qty}</span><button onclick="updateCartQty('${i.key}',1)" class="w-7 h-7 border border-earth-200 rounded-lg flex items-center justify-center hover:border-brand-400 text-xs"><iconify-icon icon="lucide:plus"></iconify-icon></button></div><span class="text-sm font-bold text-brand-600">₹${i.price*i.qty}</span></div></div></div>`).join('')}</div>
+  <div class="bg-white rounded-2xl border border-earth-100/40 p-5"><div class="space-y-1.5 mb-4"><div class="flex justify-between text-sm"><span class="text-earth-500/50">Subtotal</span><span class="font-medium">₹${t}</span></div><div class="flex justify-between text-sm"><span class="text-earth-500/50">Delivery</span><span class="font-medium ${d===0?'text-brand-600':''}">${d===0?'Free':'₹'+d}</span></div>${d>0?`<p class="text-[10px] text-brand-500">Add ₹${500-t} more for free delivery</p>`:''}<div class="flex justify-between text-base font-bold pt-2.5 border-t border-earth-100"><span>Total</span><span class="text-brand-600">₹${t+d}</span></div></div>
+  <div class="flex gap-3"><button onclick="nav('checkout')" class="btn-s flex-1 bg-brand-500 hover:bg-brand-600 text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-brand-500/25 transition-all">Proceed to Checkout</button><a href="${waLink()}" target="_blank" class="flex items-center justify-center px-4 py-3 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-xl transition-all"><iconify-icon icon="mdi:whatsapp" class="text-xl"></iconify-icon></a></div></div>`;
+}
+
+// ==================== CHECKOUT ====================
+function renderCheckout(){
+  const t=cartTotal(),d=t>=500?0:49;
+  document.getElementById('coTotalBtn').textContent='₹'+(t+d);
+  document.getElementById('coSub').textContent='₹'+t;
+  document.getElementById('coDel').textContent=d===0?'Free':'₹'+d;
+  document.getElementById('coTot').textContent='₹'+(t+d);
+  document.getElementById('coItems').innerHTML=getCart().map(c=>`<div class="flex items-center gap-3"><img src="${c.image}" class="w-10 h-10 rounded-lg object-cover" onerror="this.src='https://picsum.photos/seed/spice-fallback/80/80'"><div class="flex-1 min-w-0"><p class="text-xs font-medium text-earth-500 truncate">${c.name}</p><p class="text-[10px] text-earth-500/35">${c.weight} × ${c.qty}</p></div><span class="text-xs font-bold text-earth-500">₹${c.price*c.qty}</span></div>`).join('');
+}
+function chkPin(){
+  const pin=document.getElementById('cPin').value.trim(),msg=document.getElementById('pinMsg'),inp=document.getElementById('cPin');
+  if(pin.length!==6||isNaN(pin)){msg.textContent='Enter a valid 6-digit pincode';msg.className='text-[11px] mt-1 text-red-500';msg.classList.remove('hidden');inp.style.borderColor='#ef4444';return}
+  const ok=['600','500','400','560','110','641','625','682','695','700','380','411','302','122','201','462','452'].some(p=>pin.startsWith(p));
+  msg.classList.remove('hidden');
+  if(ok){msg.textContent='✓ Delivery available (3-5 days)';msg.className='text-[11px] mt-1 text-brand-600 font-medium';inp.style.borderColor='#2e7d32'}
+  else{msg.textContent='✗ Not deliverable. Try WhatsApp order.';msg.className='text-[11px] mt-1 text-red-500';inp.style.borderColor='#ef4444'}
+}
+function placeOrder(){
+  const name=document.getElementById('cName').value.trim(),phone=document.getElementById('cPhone').value.trim(),addr=document.getElementById('cAddr').value.trim(),pin=document.getElementById('cPin').value.trim(),email=document.getElementById('cEmail').value.trim(),city=document.getElementById('cCity').value.trim();
+  const pay=document.querySelector('input[name="pay"]:checked')?.value||'upi';
+  if(!name||!phone||!addr||!pin){toast('Please fill all required fields','error');return}
+  if(phone.replace(/\D/g,'').length<10){toast('Enter a valid phone number','error');return}
+  if(pin.length!==6){toast('Enter a valid pincode','error');return}
+  if(!getCart().length){toast('Cart is empty','error');return}
+  const btn=document.getElementById('placeBtn');btn.innerHTML='<span class="spinner"></span> Processing...';btn.disabled=true;
+  setTimeout(()=>{
+    const t=cartTotal(),d=t>=500?0:49,oid='NS-'+Date.now().toString().slice(-6);
+    const order={id:oid,customer:{name,phone,email,address:addr,pincode:pin,city},items:[...getCart()],subtotal:t,delivery:d,total:t+d,payment:pay,status:'pending',createdAt:Date.now()};
+    const orders=getOrders();orders.unshift(order);DB.set('orders',orders);
+    setCart([]);
+    document.getElementById('sOrderId').textContent=oid;
+    document.getElementById('successModal').classList.remove('hidden');
+    document.getElementById('successModal').classList.add('flex');
+    btn.innerHTML='Place Order — <span id="coTotalBtn">₹0</span>';btn.disabled=false;
+    ['cName','cPhone','cEmail','cAddr','cPin','cCity'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('pinMsg').classList.add('hidden');
+  },1500);
+}
+function closeSuccess(){document.getElementById('successModal').classList.add('hidden');document.getElementById('successModal').classList.remove('flex')}
+
+// Payment radio styling
+document.addEventListener('change',e=>{
+  if(e.target.name==='pay'){document.querySelectorAll('#payMethods label').forEach(l=>{l.className=l.querySelector('input').checked?'flex items-center gap-3 p-4 rounded-xl border-2 border-brand-500 bg-brand-50/50 cursor-pointer':'flex items-center gap-3 p-4 rounded-xl border-2 border-earth-200 hover:border-earth-300 cursor-pointer transition-colors'})}
+});
+
+// ==================== AUTH ====================
+const AEmail='admin@naattusuvai.com',APass='admin123';
+function isLoggedIn(){return!!DB.get('token',null)}
+function adminLogin(){
+  const email=document.getElementById('aEmail').value.trim(),pass=document.getElementById('aPass').value,err=document.getElementById('loginErr');
+  if(email===AEmail&&pass===APass){DB.set('token','jwt_'+btoa(email+':'+Date.now()));err.classList.add('hidden');toast('Welcome back, Admin!');nav('admin')}
+  else{err.textContent='Invalid email or password';err.classList.remove('hidden');document.getElementById('aPass').value='';document.getElementById('aPass').parentElement.classList.add('shake');setTimeout(()=>document.getElementById('aPass').parentElement.classList.remove('shake'),300)}
+}
+function adminLogout(){DB.set('token',null);toast('Logged out','info');nav('home')}
+
+// ==================== ADMIN NAV ====================
+function toggleAdminSide(){document.getElementById('adminSidebar').classList.toggle('open');document.getElementById('adminOvr').classList.toggle('hidden')}
+function adminNav(section){
+  document.querySelectorAll('.admin-section').forEach(s=>s.classList.add('hidden'));
+  document.getElementById('an-'+section)?.classList.remove('hidden');
+  const titles={'overview':'Dashboard Overview','a-products':'Product Management','a-orders':'Order Management','a-customers':'Customer Management'};
+  document.getElementById('adminTitle').textContent=titles[section]||'Dashboard';
+  document.querySelectorAll('.an-btn').forEach(b=>{b.classList.toggle('bg-white/15',b.dataset.an===section);b.classList.toggle('text-white',b.dataset.an===section);b.classList.toggle('text-white/70',b.dataset.an!==section)});
+  document.getElementById('adminSidebar').classList.remove('open');document.getElementById('adminOvr').classList.add('hidden');
+  if(section==='overview')renderOverview();
+  if(section==='a-products')renderAProducts();
+  if(section==='a-orders')renderAOrders();
+  if(section==='a-customers')renderACustomers();
+}
+function renderAdmin(){adminNav('overview')}
+
+// ==================== ADMIN: OVERVIEW ====================
+function renderOverview(){
+  const orders=getOrders(),products=getProducts(),customers=[...new Map(orders.map(o=>[o.customer.phone,o.customer])).values()];
+  const revenue=orders.reduce((s,o)=>s+o.total,0);
+  document.getElementById('stOrders').textContent=orders.length;
+  document.getElementById('stRevenue').textContent='₹'+revenue.toLocaleString();
+  document.getElementById('stProducts').textContent=products.length;
+  document.getElementById('stCustomers').textContent=customers.length;
+  // Revenue by category
+  const catRev={};products.forEach(p=>{catRev[p.category]=0});
+  orders.forEach(o=>{o.items.forEach(item=>{const pr=products.find(x=>x.id===item.id);if(pr)catRev[pr.category]=(catRev[pr.category]||0)+item.price*item.qty})});
+  const maxR=Math.max(...Object.values(catRev),1);
+  const cols={spices:'bg-brand-500',powders:'bg-gold-400',oils:'bg-amber-500'};
+  document.getElementById('revChart').innerHTML=Object.entries(catRev).map(([cat,val])=>`<div class="flex items-center gap-3"><span class="text-xs font-medium text-earth-500/60 w-16 capitalize">${cat}</span><div class="flex-1 stat-bar"><div class="stat-bar-fill ${cols[cat]||'bg-brand-500'}" style="width:${(val/maxR*100).toFixed(1)}%"></div></div><span class="text-xs font-bold text-earth-500 w-20 text-right">₹${val.toLocaleString()}</span></div>`).join('');
+  // Recent orders
+  const sc={pending:'bg-yellow-100 text-yellow-700',shipped:'bg-blue-100 text-blue-700',delivered:'bg-green-100 text-green-700',cancelled:'bg-red-100 text-red-700'};
+  document.getElementById('recentOrdBody').innerHTML=orders.slice(0,5).map(o=>`<tr class="text-earth-500"><td class="py-3 pr-4 font-mono text-xs font-semibold text-brand-600">${o.id}</td><td class="py-3 pr-4 text-sm">${o.customer.name}</td><td class="py-3 pr-4 text-sm font-semibold">₹${o.total}</td><td class="py-3 pr-4"><span class="badge ${sc[o.status]||''} capitalize">${o.status}</span></td><td class="py-3 text-xs text-earth-500/40">${new Date(o.createdAt).toLocaleDateString()}</td></tr>`).join('')||'<tr><td colspan="5" class="py-8 text-center text-earth-500/30 text-sm">No orders yet</td></tr>';
+}
+
+// ==================== ADMIN: PRODUCTS ====================
+function renderAProducts(){
+  const products=getAllProducts();
+  document.getElementById('prodCount').textContent=products.filter(p=>p.active!==false).length;
+  const totalStock=p=>p.weights.reduce((s,w)=>s+(w.stock||0),0);
+  document.getElementById('aProdBody').innerHTML=products.filter(p=>p.active!==false).map(p=>`<tr class="text-earth-500">
+    <td class="p-4"><div class="flex items-center gap-3"><img src="${p.image}" class="w-10 h-10 rounded-lg object-cover" onerror="this.src='https://picsum.photos/seed/spice-fallback/80/80'"><div><p class="text-sm font-semibold">${p.name}</p><p class="text-[10px] text-earth-500/40">${p.id}</p></div></div></td>
+    <td class="p-4"><span class="badge bg-cream-100 text-earth-500/70 capitalize">${p.category}</span></td>
+    <td class="p-4 text-sm">₹${p.weights[0].price} <span class="text-[10px] text-earth-500/35">/ ${p.weights[0].label}</span></td>
+    <td class="p-4 text-sm ${totalStock(p)<10?'text-red-500 font-semibold':''}">${totalStock(p)}</td>
+    <td class="p-4">${p.featured?'<iconify-icon icon="lucide:star" class="text-gold-400 text-lg"></iconify-icon>':'<span class="text-earth-300 text-xs">—</span>'}</td>
+    <td class="p-4"><div class="flex gap-1"><button onclick="editProduct('${p.id}')" class="p-1.5 rounded-lg hover:bg-brand-50 text-earth-400 hover:text-brand-600 transition-colors" title="Edit"><iconify-icon icon="lucide:pencil" class="text-base"></iconify-icon></button><button onclick="deleteProduct('${p.id}')" class="p-1.5 rounded-lg hover:bg-red-50 text-earth-400 hover:text-red-500 transition-colors" title="Delete"><iconify-icon icon="lucide:trash-2" class="text-base"></iconify-icon></button></div></td>
+  </tr>`).join('')||'<tr><td colspan="6" class="py-8 text-center text-earth-500/30 text-sm">No products</td></tr>';
+}
+
+// Product modal
+let _pmW=[];
+function openProdModal(id){
+  document.getElementById('prodModal').classList.remove('hidden');document.getElementById('prodModal').classList.add('flex');
+  if(id){
+    const p=getAllProducts().find(x=>x.id===id);if(!p)return;
+    document.getElementById('pmTitle').textContent='Edit Product';
+    document.getElementById('pmId').value=p.id;document.getElementById('pmName').value=p.name;document.getElementById('pmCat').value=p.category;document.getElementById('pmTag').value=p.tag||'';document.getElementById('pmImg').value=p.image;document.getElementById('pmDesc').value=p.desc;document.getElementById('pmFeat').checked=p.featured;
+    _pmW=p.weights.map(w=>({...w}));
+  }else{
+    document.getElementById('pmTitle').textContent='Add Product';document.getElementById('pmId').value='';['pmName','pmTag','pmImg','pmDesc'].forEach(id=>document.getElementById(id).value='');document.getElementById('pmCat').value='spices';document.getElementById('pmFeat').checked=false;
+    _pmW=[{label:'100g',price:'',stock:''},{label:'250g',price:'',stock:''},{label:'500g',price:'',stock:''},{label:'1kg',price:'',stock:''}];
+  }
+  renderWRows();
+}
+function closeProdModal(){document.getElementById('prodModal').classList.add('hidden');document.getElementById('prodModal').classList.remove('flex')}
+function addWeightRow(){_pmW.push({label:'',price:'',stock:''});renderWRows()}
+function removeWeightRow(i){_pmW.splice(i,1);renderWRows()}
+function renderWRows(){
+  document.getElementById('pmWeights').innerHTML=_pmW.map((w,i)=>`<div class="flex gap-2 items-center"><input type="text" value="${w.label}" placeholder="100g" onchange="_pmW[${i}].label=this.value" class="flex-1 px-3 py-2 rounded-lg border border-earth-200 text-xs"><input type="number" value="${w.price}" placeholder="₹ Price" onchange="_pmW[${i}].price=Number(this.value)" class="w-24 px-3 py-2 rounded-lg border border-earth-200 text-xs"><input type="number" value="${w.stock||''}" placeholder="Stock" onchange="_pmW[${i}].stock=Number(this.value)||0" class="w-20 px-3 py-2 rounded-lg border border-earth-200 text-xs">${_pmW.length>1?`<button onclick="removeWeightRow(${i})" class="p-1 text-red-400 hover:text-red-600"><iconify-icon icon="lucide:x" class="text-base"></iconify-icon></button>`:''}</div>`).join('');
+}
+function saveProduct(){
+  const id=document.getElementById('pmId').value,name=document.getElementById('pmName').value.trim(),cat=document.getElementById('pmCat').value,tag=document.getElementById('pmTag').value.trim(),img=document.getElementById('pmImg').value.trim(),desc=document.getElementById('pmDesc').value.trim(),feat=document.getElementById('pmFeat').checked;
+  if(!name||!img||!desc){toast('Fill all required fields','error');return}
+  const validW=_pmW.filter(w=>w.label&&w.price>0);if(!validW.length){toast('Add at least one weight with price','error');return}
+  validW.forEach(w=>{if(!w.stock)w.stock=0});
+  let products=getAllProducts();
+  if(id){const idx=products.findIndex(p=>p.id===id);if(idx>=0)products[idx]={...products[idx],name,category:cat,tag:tag||null,image:img,desc,featured:feat,weights:validW};toast('Product updated!')}
+  else{products.push({id:'p'+Date.now(),name,category:cat,tag:tag||null,image:img,desc,featured:feat,active:true,weights:validW,createdAt:Date.now()});toast('Product added!')}
+  DB.set('products',products);closeProdModal();renderAProducts();renderFeatured();
+}
+function editProduct(id){openProdModal(id)}
+function deleteProduct(id){
+  if(!confirm('Delete this product?'))return;
+  let products=getAllProducts();products=products.filter(p=>p.id!==id);DB.set('products',products);toast('Product deleted','info');renderAProducts();renderFeatured();
+}
+
+// ==================== ADMIN: ORDERS ====================
+function renderAOrders(){
+  const filter=document.getElementById('ordFilter')?.value||'all';
+  let orders=getOrders();if(filter!=='all')orders=orders.filter(o=>o.status===filter);
+  document.getElementById('ordCount').textContent=orders.length;
+  const sc={pending:'bg-yellow-100 text-yellow-700',shipped:'bg-blue-100 text-blue-700',delivered:'bg-green-100 text-green-700',cancelled:'bg-red-100 text-red-700'};
+  const pc={upi:'bg-purple-100 text-purple-700',razorpay:'bg-blue-100 text-blue-700',cod:'bg-earth-100 text-earth-600'};
+  document.getElementById('aOrdBody').innerHTML=orders.map(o=>`<tr class="text-earth-500">
+    <td class="p-4 font-mono text-xs font-semibold text-brand-600">${o.id}</td>
+    <td class="p-4"><p class="text-sm font-medium">${o.customer.name}</p><p class="text-[10px] text-earth-500/35">${o.customer.phone}</p></td>
+    <td class="p-4 text-xs text-earth-500/60">${o.items.length} item${o.items.length>1?'s':''}</td>
+    <td class="p-4 text-sm font-semibold">₹${o.total}</td>
+    <td class="p-4"><span class="badge ${pc[o.payment]||''} uppercase">${o.payment}</span></td>
+    <td class="p-4"><span class="badge ${sc[o.status]||''} capitalize">${o.status}</span></td>
+    <td class="p-4"><button onclick="viewOrder('${o.id}')" class="p-1.5 rounded-lg hover:bg-brand-50 text-earth-400 hover:text-brand-600 transition-colors" title="View"><iconify-icon icon="lucide:eye" class="text-base"></iconify-icon></button></td>
+  </tr>`).join('')||'<tr><td colspan="7" class="py-8 text-center text-earth-500/30 text-sm">No orders</td></tr>';
+}
+function viewOrder(id){
+  const o=getOrders().find(x=>x.id===id);if(!o)return;
+  document.getElementById('omTitle').textContent='Order '+o.id;
+  const sc={pending:'bg-yellow-100 text-yellow-700',shipped:'bg-blue-100 text-blue-700',delivered:'bg-green-100 text-green-700',cancelled:'bg-red-100 text-red-700'};
+  document.getElementById('omContent').innerHTML=`
+    <div class="flex items-center justify-between mb-5"><span class="badge ${sc[o.status]} capitalize text-xs px-3 py-1">${o.status}</span><span class="text-[11px] text-earth-500/35">${new Date(o.createdAt).toLocaleString()}</span></div>
+    <div class="bg-cream-50 rounded-xl p-4 mb-5 space-y-1.5"><p class="text-[10px] font-bold text-earth-500/60 uppercase tracking-wider mb-2">Customer Info</p><p class="text-sm font-medium text-earth-500">${o.customer.name}</p><p class="text-sm text-earth-500/60">${o.customer.phone}${o.customer.email?' · '+o.customer.email:''}</p><p class="text-sm text-earth-500/60">${o.customer.address}</p><p class="text-sm text-earth-500/60">${o.customer.city||'—'} — ${o.customer.pincode}</p></div>
+    <div class="space-y-2.5 mb-5">${o.items.map(i=>`<div class="flex items-center gap-3"><img src="${i.image}" class="w-10 h-10 rounded-lg object-cover" onerror="this.src='https://picsum.photos/seed/spice-fallback/80/80'"><div class="flex-1"><p class="text-sm font-medium">${i.name} <span class="text-earth-500/40">(${i.weight})</span></p><p class="text-[11px] text-earth-500/40">Qty: ${i.qty}</p></div><span class="text-sm font-semibold">₹${i.price*i.qty}</span></div>`).join('')}</div>
+    <div class="border-t border-earth-100 pt-3 space-y-1 mb-5"><div class="flex justify-between text-sm"><span class="text-earth-500/50">Subtotal</span><span>₹${o.subtotal}</span></div><div class="flex justify-between text-sm"><span class="text-earth-500/50">Delivery</span><span>${o.delivery===0?'Free':'₹'+o.delivery}</span></div><div class="flex justify-between text-sm font-bold pt-1 border-t border-earth-100"><span>Total</span><span class="text-brand-600">₹${o.total}</span></div><div class="flex justify-between text-sm"><span class="text-earth-500/50">Payment</span><span class="uppercase font-medium">${o.payment}</span></div></div>
+    <div><label class="block text-xs font-medium text-earth-500/60 mb-1.5">Update Status</label><select onchange="updateOrderSt('${o.id}',this.value)" class="w-full px-4 py-2.5 rounded-xl border border-earth-200 text-sm bg-white">${['pending','shipped','delivered','cancelled'].map(s=>`<option value="${s}" ${o.status===s?'selected':''}>${s.charAt(0).toUpperCase()+s.slice(1)}</option>`).join('')}</select></div>`;
+  document.getElementById('ordModal').classList.remove('hidden');document.getElementById('ordModal').classList.add('flex');
+}
+function closeOrdModal(){document.getElementById('ordModal').classList.add('hidden');document.getElementById('ordModal').classList.remove('flex')}
+function updateOrderSt(id,status){
+  let orders=getOrders(),o=orders.find(x=>x.id===id);
+  if(o){o.status=status;DB.set('orders',orders);toast(`Order ${id} → ${status}`);renderAOrders()}
+}
+
+// ==================== ADMIN: CUSTOMERS ====================
+function renderACustomers(){
+  const orders=getOrders(),custMap={};
+  orders.forEach(o=>{const k=o.customer.phone;if(!custMap[k])custMap[k]={name:o.customer.name,phone:o.customer.phone,city:o.customer.city||'—',orders:0,spent:0};custMap[k].orders++;custMap[k].spent+=o.total});
+  const custs=Object.values(custMap);
+  document.getElementById('custCount').textContent=custs.length;
+  document.getElementById('aCustBody').innerHTML=custs.map(c=>`<tr class="text-earth-500">
+    <td class="p-4"><div class="flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-xs font-bold text-brand-600">${c.name.charAt(0)}</div><span class="text-sm font-medium">${c.name}</span></div></td>
+    <td class="p-4 text-sm text-earth-500/60">${c.phone}</td>
+    <td class="p-4 text-sm text-earth-500/60">${c.city}</td>
+    <td class="p-4 text-sm font-semibold">${c.orders}</td>
+    <td class="p-4 text-sm font-semibold text-brand-600">₹${c.spent.toLocaleString()}</td>
+  </tr>`).join('')||'<tr><td colspan="5" class="py-8 text-center text-earth-500/30 text-sm">No customers yet</td></tr>';
+}
+
+// ==================== INIT ====================
+renderFeatured();updateBadge();
+</script>
+</body>
+</html>

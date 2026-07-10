@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order - Ellakai Spices</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .tracking-page { padding: 120px 0 80px; min-height: 100vh; background: #F8F5F0; }
+        .tracking-container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        .tracking-search { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); margin-bottom: 40px; text-align: center; }
+        .tracking-search h1 { font-size: 36px; margin-bottom: 15px; }
+        .tracking-search p { color: #666; margin-bottom: 30px; }
+        .search-box { display: flex; gap: 15px; max-width: 600px; margin: 0 auto; }
+        .search-box input { flex: 1; padding: 14px 20px; border: 2px solid #E5E5E5; border-radius: 8px; font-size: 16px; }
+        .search-box button { padding: 14px 30px; background: #C46A2D; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
+        .order-status { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); display: none; }
+        .order-header { text-align: center; padding-bottom: 30px; border-bottom: 2px solid #F8F5F0; margin-bottom: 40px; }
+        .order-id { font-size: 14px; color: #666; margin-bottom: 10px; }
+        .order-status-badge { display: inline-block; padding: 10px 25px; background: #10B981; color: white; border-radius: 20px; font-weight: 600; }
+        .tracking-timeline { position: relative; padding-left: 50px; }
+        .timeline-item { position: relative; padding-bottom: 40px; }
+        .timeline-item:last-child { padding-bottom: 0; }
+        .timeline-item::before { content: ''; position: absolute; left: -35px; top: 0; width: 2px; height: 100%; background: #E5E5E5; }
+        .timeline-dot { position: absolute; left: -44px; top: 0; width: 20px; height: 20px; background: #E5E5E5; border-radius: 50%; border: 4px solid white; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); }
+        .timeline-item.completed .timeline-dot { background: #10B981; }
+        .timeline-item.active .timeline-dot { background: #C46A2D; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(196, 106, 45, 0.7); } 50% { box-shadow: 0 0 0 10px rgba(196, 106, 45, 0); } }
+        .timeline-content h3 { font-size: 18px; margin-bottom: 5px; }
+        .timeline-date { font-size: 13px; color: #999; margin-bottom: 8px; }
+        .timeline-desc { color: #666; font-size: 14px; line-height: 1.6; }
+        .order-details { background: #F8F5F0; padding: 25px; border-radius: 12px; margin-top: 40px; }
+        .detail-row { display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #E5E5E5; }
+        .detail-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        @media (max-width: 768px) { .search-box { flex-direction: column; } .tracking-timeline { padding-left: 35px; } }
+    </style>
+</head>
+<body>
+    <header class="header scrolled" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo"><a href="index.html"><i class="fas fa-seedling"></i><span>Ellakai Spices</span></a></div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="products.html" class="nav-link">Products</a></li>
+                        <li><a href="account.html" class="nav-link">Account</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <a href="cart.html" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="account.html" class="icon-btn"><i class="fas fa-user"></i></a>
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle"><span></span><span></span><span></span></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tracking-page">
+        <div class="tracking-container">
+            <div class="tracking-search">
+                <h1>Track Your Order</h1>
+                <p>Enter your order ID to track your shipment</p>
+                <div class="search-box">
+                    <input type="text" id="orderIdInput" placeholder="Enter Order ID (e.g., ORD1234567890)" value="">
+                    <button onclick="trackOrder()"><i class="fas fa-search"></i> Track</button>
+                </div>
+            </div>
+
+            <div class="order-status" id="orderStatus">
+                <div class="order-header">
+                    <p class="order-id">Order ID: <strong id="displayOrderId"></strong></p>
+                    <h2>Order Status</h2>
+                    <span class="order-status-badge" id="statusBadge">In Transit</span>
+                </div>
+
+                <div class="tracking-timeline">
+                    <div class="timeline-item completed">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3><i class="fas fa-check-circle" style="color: #10B981;"></i> Order Confirmed</h3>
+                            <p class="timeline-date">Jan 15, 2024 - 10:30 AM</p>
+                            <p class="timeline-desc">Your order has been confirmed and is being prepared for shipment.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item completed">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3><i class="fas fa-box" style="color: #10B981;"></i> Order Packed</h3>
+                            <p class="timeline-date">Jan 16, 2024 - 02:15 PM</p>
+                            <p class="timeline-desc">Your order has been carefully packed and quality checked.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item active">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3><i class="fas fa-shipping-fast" style="color: #C46A2D;"></i> In Transit</h3>
+                            <p class="timeline-date">Jan 17, 2024 - 09:00 AM</p>
+                            <p class="timeline-desc">Your order is on the way. Expected delivery by Jan 20, 2024.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3><i class="fas fa-truck"></i> Out for Delivery</h3>
+                            <p class="timeline-date">Pending</p>
+                            <p class="timeline-desc">Your order will be out for delivery soon.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3><i class="fas fa-home"></i> Delivered</h3>
+                            <p class="timeline-date">Pending</p>
+                            <p class="timeline-desc">Your order will be delivered to your address.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-details">
+                    <h3 style="margin-bottom: 20px;">Order Details</h3>
+                    <div class="detail-row"><span><strong>Order Items:</strong></span><span>Premium Cardamom (2kg), Black Pepper (1kg)</span></div>
+                    <div class="detail-row"><span><strong>Order Total:</strong></span><span>₹3,050</span></div>
+                    <div class="detail-row"><span><strong>Delivery Address:</strong></span><span>123 Main Street, Mumbai, Maharashtra 400001</span></div>
+                    <div class="detail-row"><span><strong>Contact:</strong></span><span>+91 9876543210</span></div>
+                    <div class="detail-row"><span><strong>Carrier:</strong></span><span>Blue Dart Express</span></div>
+                    <div class="detail-row"><span><strong>Tracking Number:</strong></span><span>BD987654321IN</span></div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+                    <a href="account.html" class="btn btn-secondary" style="margin-left: 15px;">View All Orders</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><p>&copy; 2024 Ellakai Spices. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('id') || localStorage.getItem('lastOrder') || '';
+        
+        if (orderId) {
+            document.getElementById('orderIdInput').value = orderId;
+            trackOrder();
+        }
+
+        function trackOrder() {
+            const input = document.getElementById('orderIdInput').value.trim();
+            if (input) {
+                document.getElementById('displayOrderId').textContent = input;
+                document.getElementById('orderStatus').style.display = 'block';
+                document.getElementById('orderStatus').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                showNotification('Please enter an order ID', 'error');
+            }
+        }
+    </script>
+</body>
+</html>

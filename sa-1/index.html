@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellakai Spices - Premium Quality Spices Direct From Farmers</title>
+    <meta name="description" content="Premium wholesale cardamom & natural Indian spices supplier. Farm-direct sourcing, best prices for bulk buyers, restaurants & supermarkets.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <i class="fas fa-seedling"></i>
+                            <span>Ellakai Spices</span>
+                        </a>
+                    </div>
+
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="products.html" class="nav-link">Products</a></li>
+                        <li><a href="wholesale.html" class="nav-link">Wholesale</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+
+                    <!-- Right Side Actions -->
+                    <div class="nav-actions">
+                        <button class="icon-btn search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="icon-btn cart-btn" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                        <a href="https://wa.me/1234567890" class="btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp Order</span>
+                        </a>
+                        <a href="wholesale.html" class="btn-wholesale">Get Wholesale Price</a>
+
+                        <!-- Mobile Menu Toggle -->
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search Overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <button class="search-close" id="searchClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <input type="text" placeholder="Search for spices..." class="search-input" id="searchInput">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="floating-spice spice-1"></div>
+            <div class="floating-spice spice-2"></div>
+            <div class="floating-spice spice-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-up">
+                    Premium Quality Spices<br>
+                    <span class="highlight">Direct From Farmers</span>
+                </h1>
+                <p class="hero-subtitle animate-fade-up delay-1">
+                    Wholesale Cardamom & Natural Spices Supplier
+                </p>
+                <div class="hero-buttons animate-fade-up delay-2">
+                    <a href="products.html" class="btn btn-primary">
+                        View Products
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="wholesale.html" class="btn btn-secondary">
+                        Get Wholesale Price
+                        <i class="fas fa-tag"></i>
+                    </a>
+                </div>
+                <div class="hero-stats animate-fade-up delay-3">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Partner Farmers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Natural Spices</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Countries Served</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Our Premium Collection</span>
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-description">
+                    Handpicked premium spices directly sourced from the best farms across India
+                </p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-product="cardamom">
+                    <div class="product-image">
+                        <div class="product-badge">Premium</div>
+                        <img src="https://images.unsplash.com/photo-1596040033229-a0b8d1cf0877?w=500" alt="Cardamom">
+                        <div class="product-overlay">
+                            <button class="btn-icon quick-view" data-product="cardamom">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-icon add-to-cart" data-product="cardamom">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Premium Cardamom</h3>
+                        <p class="product-desc">Green cardamom from Kerala farms</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹1,200/kg</span>
+                            <a href="product-detail.html?product=cardamom" class="btn-text">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product="black-pepper">
+                    <div class="product-image">
+                        <div class="product-badge">Best Seller</div>
+                        <img src="https://images.unsplash.com/photo-1599909533780-d8c3e4c2a7a6?w=500" alt="Black Pepper">
+                        <div class="product-overlay">
+                            <button class="btn-icon quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-icon add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Black Pepper</h3>
+                        <p class="product-desc">Malabar black pepper, bold flavor</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹650/kg</span>
+                            <a href="product-detail.html?product=black-pepper" class="btn-text">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product="cloves">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585671215623-2b2a7f566e3f?w=500" alt="Cloves">
+                        <div class="product-overlay">
+                            <button class="btn-icon quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-icon add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cloves</h3>
+                        <p class="product-desc">Aromatic whole cloves</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹800/kg</span>
+                            <a href="product-detail.html?product=cloves" class="btn-text">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product="fennel">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1599909533780-d8c3e4c2a7a6?w=500" alt="Fennel Seeds">
+                        <div class="product-overlay">
+                            <button class="btn-icon quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-icon add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Fennel Seeds</h3>
+                        <p class="product-desc">Premium quality fennel</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹280/kg</span>
+                            <a href="product-detail.html?product=fennel" class="btn-text">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product="cumin">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1596040033229-a0b8d1cf0877?w=500" alt="Cumin Seeds">
+                        <div class="product-overlay">
+                            <button class="btn-icon quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-icon add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cumin Seeds</h3>
+                        <p class="product-desc">Rajasthan cumin, rich aroma</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹320/kg</span>
+                            <a href="product-detail.html?product=cumin" class="btn-text">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product="mustard">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1585671215623-2b2a7f566e3f?w=500" alt="Mustard Seeds">
+                        <div class="product-overlay">
+                            <button class="btn-icon quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-icon add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Mustard Seeds</h3>
+                        <p class="product-desc">Black & yellow varieties</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹180/kg</span>
+                            <a href="product-detail.html?product=mustard" class="btn-text">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product="fenugreek">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1599909533780-d8c3e4c2a7a6?w=500" alt="Fenugreek">
+                        <div class="product-overlay">
+                            <button class="btn-icon quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-icon add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Fenugreek</h3>
+                        <p class="product-desc">Golden fenugreek seeds</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹150/kg</span>
+                            <a href="product-detail.html?product=fenugreek" class="btn-text">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product="coriander">
+                    <div class="product-image">
+                        <div class="product-badge">New</div>
+                        <img src="https://images.unsplash.com/photo-1596040033229-a0b8d1cf0877?w=500" alt="Coriander">
+                        <div class="product-overlay">
+                            <button class="btn-icon quick-view">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-icon add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Coriander Seeds</h3>
+                        <p class="product-desc">Fresh harvest coriander</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹220/kg</span>
+                            <a href="product-detail.html?product=coriander" class="btn-text">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="products.html" class="btn btn-primary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose section-padding" style="background-color: #F8F5F0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Why Ellakai Spices</span>
+                <h2 class="section-title">What Makes Us Different</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3>Farm Direct Sourcing</h3>
+                    <p>Direct partnerships with 500+ farmers across India ensuring authentic quality and fair prices</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Premium Quality Spices</h3>
+                    <p>Hand-selected, naturally processed spices with strict quality control at every step</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Best Wholesale Pricing</h3>
+                    <p>Competitive bulk pricing for restaurants, supermarkets, and wholesale distributors</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Fresh Packaging</h3>
+                    <p>Vacuum-sealed, food-grade packaging that preserves aroma and freshness</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick dispatch and reliable logistics partners for timely delivery worldwide</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certified & Safe</h3>
+                    <p>FSSAI certified, ISO compliant with lab-tested quality assurance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Farm to Customer Story -->
+    <section class="farm-story section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Our Journey</span>
+                <h2 class="section-title">From Farm to Your Kitchen</h2>
+            </div>
+
+            <div class="story-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-image">
+                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600" alt="Farming">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">01</div>
+                        <h3>Direct Sourcing from Villages</h3>
+                        <p>We partner directly with small-scale farmers in remote villages across Kerala, Karnataka, and Tamil Nadu. By eliminating middlemen, we ensure farmers get fair prices and you get authentic spices.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reverse">
+                    <div class="timeline-image">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600" alt="Harvest">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">02</div>
+                        <h3>Fresh Harvest Selection</h3>
+                        <p>Our quality experts visit farms during harvest season to hand-select only the finest produce. We check for color, size, aroma, and moisture content to meet international standards.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-image">
+                        <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=600" alt="Processing">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">03</div>
+                        <h3>Natural Processing</h3>
+                        <p>Spices are naturally sun-dried and processed in hygienic facilities. No chemicals, no artificial colors – just pure, natural spices that retain their original flavor and aroma.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reverse">
+                    <div class="timeline-image">
+                        <img src="https://images.unsplash.com/photo-1586864387634-bfe8e5ca119c?w=600" alt="Quality">
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-number">04</div>
+                        <h3>Trusted Quality Assurance</h3>
+                        <p>Every batch undergoes rigorous lab testing for purity, moisture content, and microbial safety. We maintain complete traceability from farm to final packaging.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="categories section-padding" style="background-color: #F8F5F0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Explore Our Range</span>
+                <h2 class="section-title">Product Categories</h2>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card large">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1596040033229-a0b8d1cf0877?w=800" alt="Whole Spices">
+                    </div>
+                    <div class="category-content">
+                        <h3>Whole Spices</h3>
+                        <p>Premium whole spices with maximum flavor retention</p>
+                        <a href="products.html?category=whole" class="btn-text">Explore Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1599909533780-d8c3e4c2a7a6?w=500" alt="Ground Spices">
+                    </div>
+                    <div class="category-content">
+                        <h3>Ground Spices</h3>
+                        <p>Freshly ground spice powders</p>
+                        <a href="products.html?category=ground" class="btn-text">Shop Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1585671215623-2b2a7f566e3f?w=500" alt="Export Quality">
+                    </div>
+                    <div class="category-content">
+                        <h3>Premium Export</h3>
+                        <p>Export-grade premium spices</p>
+                        <a href="products.html?category=export" class="btn-text">View Range <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1596040033229-a0b8d1cf0877?w=500" alt="Bulk Wholesale">
+                    </div>
+                    <div class="category-content">
+                        <h3>Bulk Wholesale</h3>
+                        <p>Large quantity packs for businesses</p>
+                        <a href="wholesale.html" class="btn-text">Get Quote <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">What Our Clients Say</span>
+                <h2 class="section-title">Customer Testimonials</h2>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The quality of cardamom from Ellakai is exceptional. We've been sourcing for our restaurant chain for 2 years now. The aroma and freshness are unmatched!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100" alt="Rajesh Kumar">
+                        </div>
+                        <div class="author-info">
+                            <h4>Rajesh Kumar</h4>
+                            <p>Owner, Spice Garden Restaurant Chain</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent wholesale partner! Competitive pricing, consistent quality, and reliable delivery. Our customers love the authentic taste of their spices."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" alt="Priya Sharma">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Procurement Manager, Metro Supermarkets</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"As a home baker, I need the best quality spices. Ellakai's cardamom and cloves have transformed my recipes. Pure, aromatic, and worth every penny!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" alt="Anita Desai">
+                        </div>
+                        <div class="author-info">
+                            <h4>Anita Desai</h4>
+                            <p>Home Baker & Food Blogger</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-nav">
+                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wholesale CTA Section -->
+    <section class="wholesale-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Looking for Bulk Spices?</h2>
+                    <p>Get special wholesale pricing for restaurants, hotels, supermarkets, and distributors. Minimum order: 50kg</p>
+                    <ul class="cta-benefits">
+                        <li><i class="fas fa-check"></i> Competitive bulk pricing</li>
+                        <li><i class="fas fa-check"></i> Custom packaging options</li>
+                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        <li><i class="fas fa-check"></i> Flexible payment terms</li>
+                    </ul>
+                </div>
+                <div class="cta-action">
+                    <a href="wholesale.html" class="btn btn-wholesale-large">
+                        Request Wholesale Price
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <p class="cta-note">Get a quote within 24 hours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram-section section-padding" style="background-color: #F8F5F0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Follow Us</span>
+                <h2 class="section-title">@ellakispices</h2>
+                <p>Join our community and stay updated with fresh spice arrivals</p>
+            </div>
+
+            <div class="instagram-grid">
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1596040033229-a0b8d1cf0877?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1599909533780-d8c3e4c2a7a6?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1585671215623-2b2a7f566e3f?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+                <div class="instagram-post">
+                    <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=400" alt="Instagram Post">
+                    <div class="instagram-overlay">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 30px;">
+                <a href="https://instagram.com/ellakispices" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-instagram"></i> Follow on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section section-padding">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-content">
+                    <h2>Get Spice Market Updates</h2>
+                    <p>Subscribe to our newsletter for exclusive deals, new product launches, and spice industry insights</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>Ellakai Spices</span>
+                    </div>
+                    <p>Premium quality spices directly sourced from Indian farmers. Wholesale supplier for restaurants, hotels, and supermarkets worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="products.html">Cardamom</a></li>
+                        <li><a href="products.html">Black Pepper</a></li>
+                        <li><a href="products.html">Cloves</a></li>
+                        <li><a href="products.html">Cumin Seeds</a></li>
+                        <li><a href="products.html">All Spices</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Spice Market Road,<br>Kochi, Kerala 682001, India</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 1234567890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@ellakispices.com</span>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+91 9876543210</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-certifications">
+                <div class="cert-badge">
+                    <i class="fas fa-certificate"></i>
+                    <span>FSSAI Certified</span>
+                </div>
+                <div class="cert-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>ISO 9001:2015</span>
+                </div>
+                <div class="cert-badge">
+                    <i class="fas fa-leaf"></i>
+                    <span>100% Natural</span>
+                </div>
+                <div class="cert-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Lab Tested</span>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ellakai Spices. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

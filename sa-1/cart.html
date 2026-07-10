@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Ellakai Spices</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .cart-page { padding: 120px 0 80px; min-height: 100vh; background: #F8F5F0; }
+        .cart-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .cart-header { text-align: center; margin-bottom: 50px; }
+        .cart-header h1 { font-size: 42px; margin-bottom: 10px; }
+        .cart-content { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
+        .cart-items-section { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); }
+        .cart-item { display: grid; grid-template-columns: 100px 1fr 150px auto; gap: 20px; padding: 25px 0; border-bottom: 1px solid #E5E5E5; align-items: center; }
+        .cart-item:last-child { border-bottom: none; }
+        .item-image { width: 100px; height: 100px; border-radius: 8px; overflow: hidden; }
+        .item-image img { width: 100%; height: 100%; object-fit: cover; }
+        .item-details h3 { font-size: 18px; margin-bottom: 8px; }
+        .item-details .price { color: #C46A2D; font-weight: 700; font-size: 20px; }
+        .quantity-controls { display: flex; align-items: center; gap: 10px; }
+        .quantity-controls button { width: 35px; height: 35px; border: 2px solid #E5E5E5; background: white; border-radius: 4px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; }
+        .quantity-controls button:hover { border-color: #C46A2D; color: #C46A2D; }
+        .quantity-controls span { min-width: 40px; text-align: center; font-weight: 600; }
+        .remove-btn { color: #E53E3E; cursor: pointer; font-size: 20px; transition: all 0.3s ease; }
+        .remove-btn:hover { color: #C53030; transform: scale(1.2); }
+        .cart-summary { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); height: fit-content; position: sticky; top: 100px; }
+        .cart-summary h2 { font-size: 24px; margin-bottom: 25px; padding-bottom: 20px; border-bottom: 2px solid #F8F5F0; }
+        .summary-row { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 16px; }
+        .summary-row.total { font-size: 24px; font-weight: 700; color: #1B3A2B; margin-top: 20px; padding-top: 20px; border-top: 2px solid #F8F5F0; }
+        .coupon-section { margin: 25px 0; padding: 20px; background: #F8F5F0; border-radius: 8px; }
+        .coupon-input { display: flex; gap: 10px; }
+        .coupon-input input { flex: 1; padding: 12px; border: 2px solid #E5E5E5; border-radius: 6px; }
+        .coupon-input button { padding: 12px 20px; background: #1B3A2B; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+        .checkout-btn { width: 100%; padding: 18px; background: #C46A2D; color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; margin-top: 20px; }
+        .checkout-btn:hover { background: #A85524; transform: translateY(-2px); }
+        .empty-cart { text-align: center; padding: 80px 20px; }
+        .empty-cart i { font-size: 64px; color: #C46A2D; margin-bottom: 20px; }
+        @media (max-width: 968px) { .cart-content { grid-template-columns: 1fr; } .cart-item { grid-template-columns: 80px 1fr auto; } .quantity-controls { flex-direction: column; gap: 5px; } }
+    </style>
+</head>
+<body>
+    <header class="header scrolled" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo"><a href="index.html"><i class="fas fa-seedling"></i><span>Ellakai Spices</span></a></div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="products.html" class="nav-link">Products</a></li>
+                        <li><a href="account.html" class="nav-link">Account</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <a href="cart.html" class="icon-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                        <a href="account.html" class="icon-btn"><i class="fas fa-user"></i></a>
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle"><span></span><span></span><span></span></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h1>Shopping Cart</h1>
+                <p>Review your items and proceed to checkout</p>
+            </div>
+
+            <div class="cart-content" id="cartContent">
+                <div class="cart-items-section">
+                    <h2 style="margin-bottom: 20px;">Cart Items (<span id="itemCount">0</span>)</h2>
+                    <div id="cartItemsList"></div>
+                </div>
+
+                <div class="cart-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-row"><span>Subtotal:</span><span id="subtotal">₹0</span></div>
+                    <div class="summary-row"><span>Shipping:</span><span id="shipping">Free</span></div>
+                    <div class="summary-row"><span>Tax (5%):</span><span id="tax">₹0</span></div>
+                    <div class="coupon-section">
+                        <h4 style="margin-bottom: 10px; font-size: 14px;">Have a Coupon?</h4>
+                        <div class="coupon-input">
+                            <input type="text" placeholder="Enter coupon code" id="couponCode">
+                            <button onclick="applyCoupon()">Apply</button>
+                        </div>
+                    </div>
+                    <div class="summary-row total"><span>Total:</span><span id="total">₹0</span></div>
+                    <a href="checkout.html" class="checkout-btn">Proceed to Checkout <i class="fas fa-arrow-right"></i></a>
+                    <a href="products.html" style="display: block; text-align: center; margin-top: 15px; color: #C46A2D; font-weight: 600;"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
+                </div>
+            </div>
+
+            <div class="empty-cart" id="emptyCart" style="display: none;">
+                <i class="fas fa-shopping-cart"></i>
+                <h2>Your Cart is Empty</h2>
+                <p style="color: #666; margin-bottom: 25px;">Looks like you haven't added any items to your cart yet.</p>
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><p>&copy; 2024 Ellakai Spices. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function renderCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const itemsList = document.getElementById('cartItemsList');
+            const itemCount = document.getElementById('itemCount');
+            const cartContent = document.getElementById('cartContent');
+            const emptyCart = document.getElementById('emptyCart');
+
+            if (cart.length === 0) {
+                cartContent.style.display = 'none';
+                emptyCart.style.display = 'block';
+                return;
+            }
+
+            cartContent.style.display = 'grid';
+            emptyCart.style.display = 'none';
+            itemCount.textContent = cart.length;
+
+            itemsList.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div class="item-image"><img src="${item.image}" alt="${item.name}"></div>
+                    <div class="item-details">
+                        <h3>${item.name}</h3>
+                        <p class="price">₹${item.price}/kg</p>
+                    </div>
+                    <div class="quantity-controls">
+                        <button onclick="updateQty('${item.id}', -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="updateQty('${item.id}', 1)">+</button>
+                    </div>
+                    <i class="fas fa-trash remove-btn" onclick="removeItem('${item.id}')"></i>
+                </div>
+            `).join('');
+
+            updateSummary(cart);
+        }
+
+        function updateSummary(cart) {
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * 0.05;
+            const total = subtotal + tax;
+
+            document.getElementById('subtotal').textContent = `₹${subtotal.toLocaleString()}`;
+            document.getElementById('tax').textContent = `₹${Math.round(tax).toLocaleString()}`;
+            document.getElementById('total').textContent = `₹${Math.round(total).toLocaleString()}`;
+        }
+
+        function updateQty(id, change) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    cart = cart.filter(i => i.id !== id);
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCart();
+                updateCartUI();
+            }
+        }
+
+        function removeItem(id) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(i => i.id !== id);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+            updateCartUI();
+            showNotification('Item removed from cart', 'info');
+        }
+
+        function applyCoupon() {
+            const code = document.getElementById('couponCode').value.trim();
+            if (code === 'SAVE10') {
+                showNotification('Coupon applied! 10% discount', 'success');
+            } else if (code) {
+                showNotification('Invalid coupon code', 'error');
+            }
+        }
+
+        renderCart();
+    </script>
+</body>
+</html>

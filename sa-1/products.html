@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Ellakai Spices</title>
+    <meta name="description" content="Browse our complete range of premium spices including cardamom, black pepper, cloves, cumin, and more. Wholesale and retail options available.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .products-page {
+            padding-top: 120px;
+            min-height: 100vh;
+            background: #F8F5F0;
+        }
+
+        .products-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1B3A2B, #2A5840);
+            color: white;
+        }
+
+        .products-header h1 {
+            font-size: 48px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .products-filter-section {
+            background: white;
+            padding: 30px 0;
+            border-bottom: 1px solid #E5E5E5;
+            position: sticky;
+            top: 80px;
+            z-index: 100;
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: #1B3A2B;
+            white-space: nowrap;
+        }
+
+        .filter-select {
+            padding: 10px 15px;
+            border: 2px solid #E5E5E5;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            min-width: 180px;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #C46A2D;
+        }
+
+        .search-filter {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-filter input {
+            width: 100%;
+            padding: 10px 15px 10px 40px;
+            border: 2px solid #E5E5E5;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+        }
+
+        .search-filter {
+            position: relative;
+        }
+
+        .search-filter i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .products-content {
+            padding: 60px 0;
+        }
+
+        .products-count {
+            margin-bottom: 30px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .no-products {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .no-products i {
+            font-size: 64px;
+            color: #C46A2D;
+            margin-bottom: 20px;
+        }
+
+        .no-products h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .no-products p {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="header scrolled" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <i class="fas fa-seedling"></i>
+                            <span>Ellakai Spices</span>
+                        </a>
+                    </div>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="products.html" class="nav-link active">Products</a></li>
+                        <li><a href="wholesale.html" class="nav-link">Wholesale</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <button class="icon-btn search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="icon-btn cart-btn" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                        <a href="https://wa.me/1234567890" class="btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp Order</span>
+                        </a>
+                        <a href="wholesale.html" class="btn-wholesale">Get Wholesale Price</a>
+
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-container">
+                <button class="search-close" id="searchClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <input type="text" placeholder="Search for spices..." class="search-input" id="searchInput">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Page -->
+    <main class="products-page">
+        <!-- Page Header -->
+        <div class="products-header">
+            <div class="container">
+                <h1>Our Premium Spices</h1>
+                <p>Browse our complete collection of farm-fresh, natural Indian spices</p>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="products-filter-section">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label>Category:</label>
+                        <select class="filter-select" id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="whole">Whole Spices</option>
+                            <option value="ground">Ground Spices</option>
+                            <option value="export">Premium Export</option>
+                            <option value="bulk">Bulk Wholesale</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Sort By:</label>
+                        <select class="filter-select" id="sortFilter">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name: A to Z</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group search-filter">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search products..." id="productSearch">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-content">
+            <div class="container">
+                <div class="products-count" id="productsCount">
+                    Showing 8 products
+                </div>
+
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically loaded -->
+                </div>
+
+                <div class="no-products" id="noProducts" style="display: none;">
+                    <i class="fas fa-box-open"></i>
+                    <h3>No Products Found</h3>
+                    <p>Try adjusting your filters or search terms</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>Ellakai Spices</span>
+                    </div>
+                    <p>Premium quality spices directly sourced from Indian farmers. Wholesale supplier for restaurants, hotels, and supermarkets worldwide.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="products.html">Cardamom</a></li>
+                        <li><a href="products.html">Black Pepper</a></li>
+                        <li><a href="products.html">Cloves</a></li>
+                        <li><a href="products.html">Cumin Seeds</a></li>
+                        <li><a href="products.html">All Spices</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Spice Market Road,<br>Kochi, Kerala 682001, India</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 1234567890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@ellakispices.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ellakai Spices. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cartClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary btn-block">Checkout</a>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Ellakai Spices | Our Story & Mission</title>
+    <meta name="description" content="Learn about Ellakai Spices - our journey from farm to your kitchen, our commitment to quality, and our mission to provide premium natural spices.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, rgba(27, 58, 43, 0.9), rgba(42, 88, 64, 0.9)),
+                        url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1600') center/cover;
+            padding: 180px 20px 100px;
+            text-align: center;
+            color: white;
+        }
+
+        .about-hero h1 {
+            font-size: 56px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .about-hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .about-content {
+            padding: 80px 0;
+        }
+
+        .about-intro {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            text-align: center;
+        }
+
+        .about-intro h2 {
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        .about-intro p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #1B3A2B, #2A5840);
+            padding: 80px 0;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 52px;
+            color: #D4AF37;
+            margin-bottom: 10px;
+        }
+
+        .stat-box p {
+            font-size: 16px;
+            opacity: 0.95;
+        }
+
+        .values-section {
+            padding: 80px 0;
+            background: #F8F5F0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #C46A2D, #D4AF37);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: white;
+        }
+
+        .team-section {
+            padding: 80px 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 5px solid #F8F5F0;
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-member h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .team-member .role {
+            color: #C46A2D;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .certifications-section {
+            padding: 80px 0;
+            background: #F8F5F0;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .cert-card i {
+            font-size: 48px;
+            color: #D4AF37;
+            margin-bottom: 15px;
+        }
+
+        .cert-card h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                        <a href="index.html">
+                            <i class="fas fa-seedling"></i>
+                            <span>Ellakai Spices</span>
+                        </a>
+                    </div>
+
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="products.html" class="nav-link">Products</a></li>
+                        <li><a href="wholesale.html" class="nav-link">Wholesale</a></li>
+                        <li><a href="about.html" class="nav-link active">About Us</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+
+                    <div class="nav-actions">
+                        <button class="icon-btn search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="icon-btn cart-btn" id="cartBtn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                        <a href="https://wa.me/1234567890" class="btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="account.html" class="icon-btn">
+                            <i class="fas fa-user"></i>
+                        </a>
+
+                        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="about-hero">
+        <h1>Our Story</h1>
+        <p>From humble beginnings in Kerala's spice farms to becoming a trusted global supplier of premium natural spices</p>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-intro">
+                <h2>Welcome to Ellakai Spices</h2>
+                <p>Founded in 2010, Ellakai Spices began with a simple mission: to bring the authentic flavors of India's finest spices directly from farmers to kitchens worldwide. What started as a small family business in Kerala has grown into a trusted wholesale supplier serving restaurants, hotels, and supermarkets across 50+ countries.</p>
+                <p>We believe in transparency, quality, and sustainability. Every spice we sell is handpicked from farms we personally visit, ensuring you receive only the freshest, most aromatic products. By eliminating middlemen, we guarantee fair prices for farmers and unmatched quality for our customers.</p>
+                <p>Today, we partner with over 500 farmers across Kerala, Karnataka, and Tamil Nadu, supporting sustainable farming practices while delivering premium spices that elevate every dish they touch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>500+</h3>
+                    <p>Partner Farmers</p>
+                </div>
+                <div class="stat-box">
+                    <h3>50+</h3>
+                    <p>Countries Served</p>
+                </div>
+                <div class="stat-box">
+                    <h3>10,000+</h3>
+                    <p>Tons Exported Yearly</p>
+                </div>
+                <div class="stat-box">
+                    <h3>14</h3>
+                    <p>Years of Excellence</p>
+                </div>
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>Natural & Organic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Our Values</span>
+                <h2 class="section-title">What We Stand For</h2>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Quality First</h3>
+                    <p>We never compromise on quality. Every batch is lab-tested and certified to meet international standards.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Fair Trade</h3>
+                    <p>We ensure fair compensation for farmers, building long-term partnerships based on trust and mutual respect.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Sustainability</h3>
+                    <p>Supporting eco-friendly farming practices and using sustainable packaging to protect our planet.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Customer Satisfaction</h3>
+                    <p>Your satisfaction is our success. We go above and beyond to ensure you receive the best service.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Transparency</h3>
+                    <p>Complete traceability from farm to table. Know exactly where your spices come from.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Reach</h3>
+                    <p>Bringing authentic Indian spices to kitchens worldwide with reliable international shipping.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Meet Our Team</span>
+                <h2 class="section-title">The People Behind Ellakai</h2>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Founder">
+                    </div>
+                    <h3>Rajesh Kumar</h3>
+                    <p class="role">Founder & CEO</p>
+                    <p>With 20+ years in the spice industry, Rajesh founded Ellakai to revolutionize direct farmer-to-buyer relationships.</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400" alt="Quality Director">
+                    </div>
+                    <h3>Priya Sharma</h3>
+                    <p class="role">Quality Assurance Director</p>
+                    <p>Priya ensures every batch meets our stringent quality standards through rigorous testing and certification.</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="Operations Head">
+                    </div>
+                    <h3>Arjun Nair</h3>
+                    <p class="role">Head of Operations</p>
+                    <p>Managing logistics and supply chain, Arjun ensures timely delivery to clients worldwide.</p>
+                </div>
+
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Farmer Relations">
+                    </div>
+                    <h3>Lakshmi Menon</h3>
+                    <p class="role">Farmer Relations Manager</p>
+                    <p>Lakshmi works directly with our 500+ partner farmers, ensuring sustainable practices and fair trade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="certifications-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Certified & Trusted</span>
+                <h2 class="section-title">Our Certifications</h2>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <i class="fas fa-certificate"></i>
+                    <h4>FSSAI Certified</h4>
+                    <p>Food Safety Standards</p>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>ISO 9001:2015</h4>
+                    <p>Quality Management</p>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Organic Certified</h4>
+                    <p>100% Natural Products</p>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fas fa-globe"></i>
+                    <h4>Export License</h4>
+                    <p>Global Trade Approved</p>
+                </div>
+
+                <div class="cert-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Lab Tested</h4>
+                    <p>Quality Assured</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="wholesale-cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready to Experience Premium Quality?</h2>
+                    <p>Join thousands of satisfied customers worldwide who trust Ellakai Spices for their spice needs.</p>
+                </div>
+                <div class="cta-action">
+                    <a href="products.html" class="btn btn-wholesale-large">
+                        Shop Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="wholesale.html" class="btn btn-secondary" style="margin-top: 15px; padding: 16px 32px;">
+                        Request Wholesale Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>Ellakai Spices</span>
+                    </div>
+                    <p>Premium quality spices directly sourced from Indian farmers.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="wholesale.html">Wholesale</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Account</h3>
+                    <ul>
+                        <li><a href="account.html">My Account</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="order-tracking.html">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <span>+91 1234567890</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@ellakispices.com</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ellakai Spices. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
